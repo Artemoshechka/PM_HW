@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Pragmatica Ext Book;
+    src: url("Pragmatica Ext Book Reg.otf") format("opentype");
+}
+
+p{
+    font-family: Pragmatica Ext Book;
+}
+
+article{
+    margin:auto;
+    width:45%;
+    border:1px solid;
+}
+
+h1{
+    margin-top:0;
+    text-align:center;
+    font-size:24pt;
+}
+
+h2{
+    text-align:center;
+    margin-top:0;
+    color:#d6528d;
+}
+
+.main_text{
+    padding-left:10px;
+    padding-right:10px;
+    text-indent:45px;
+    line-height:2;
+}
+
+.more{
+    padding-right:60px;
+    padding-bottom:20px;
+    font-weight:bold;
+    text-align:right;
+    color:#d6528d;
+}
+
+.green_color{
+    color:#388020;
+}
