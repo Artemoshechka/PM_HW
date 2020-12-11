@@ -3,8 +3,17 @@
     src: url("Pragmatica Ext Book Reg.otf") format("opentype");
 }
 
+a {
+    text-decoration: none;
+    color:#d6528d;
+}
+
 p{
     font-family: Pragmatica Ext Book;
+    padding-left:10px;
+    padding-right:10px;
+    text-indent:45px;
+    line-height:2;
 }
 
 article{
@@ -24,13 +33,6 @@ h1{
 
 h2{
     color:#d6528d;
-}
-
-.main_text{
-    padding-left:10px;
-    padding-right:10px;
-    text-indent:45px;
-    line-height:2;
 }
 
 .more{
