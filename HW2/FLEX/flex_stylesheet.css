@@ -1,0 +1,65 @@
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 0 auto;
+    width: 700px;
+    border: 1px solid black;
+}
+
+header{
+    min-width: 100%;
+    border-bottom: 1px solid black;
+    height: 150px;
+}
+
+#empty_space{
+    border: 1px solid black;
+    width: 400px;
+    height: 24px;
+    margin-top: 63px;
+    margin-left: 85px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    margin-left: -5px;
+    margin-bottom: 30px;
+    padding: 0 5px;
+}
+
+main div{
+    border: 1px solid black;
+    margin: 10px 6px 0 6px;
+}
+
+#squares{
+    margin-top: 0;
+    margin-right: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#squares div{
+    width: 130px;
+    height: 130px;
+}
+
+#right{
+    height: 450px; /*Было бы хорошо тут использовать minmax(450px,auto), но для  того чтобы получить то же что на картинке используем просто height*/
+    flex: 1 1 auto;
+}
+
+#content{
+    width: 405px;
+    height: 450px; /*Аналогично к предыдущему комментарию*/
+}
+
+footer{
+    border-top: 1px solid black;
+    height: 150px;
+}
