@@ -523,7 +523,7 @@ body {
 .how-to-work-with-us_instruction{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 30px;
     padding-top: 20px;
 }
