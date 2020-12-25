@@ -1,14 +1,13 @@
 body {
     font-family: 'Roboto',sans-serif;
     color: #040d0d;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .wrapper{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 1140px;
 }
 
 /*Стили для заголовков*/
@@ -342,7 +341,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 110px;
+    padding: 0 50px;
 }
 
 .strengths__icons__items{
@@ -490,6 +489,9 @@ body {
 /*Блок про "Как с нами работать"*/
 .how-to-work-with-us__types{
     padding-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 
@@ -509,6 +511,7 @@ body {
     background: #ffffff;
     text-decoration-color: #ff5600;
     color: #040d0d;
+    cursor: pointer;
 }
 
 #how-to-work-with-us__types__active{
@@ -520,23 +523,18 @@ body {
 .how-to-work-with-us_instruction{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 30px;
     padding-top: 20px;
 }
 
 .how-to-work-with-us__instruction__point{
-    width: 285px;
+    width: 200px;
 }
 
 .how-to-work-with-us__instruction__point__left-image{
     float: left;
     margin: 5px 5px 50px 0;
-}
-
-.how-to-work-with-us__instruction__point__right-image{
-    float: right;
-    margin-bottom: -20px;
 }
 /*Конец блока*/
 
@@ -557,9 +555,51 @@ body {
 }
 /*Конец блока*/
 
-@media screen and (max-width: 750px){
+@media only screen and (max-width: 2000px){
+    .wrapper{
+        width: 1140px;
+    }
+}
+
+@media only screen and (max-width: 1140px){
+    .wrapper{
+        width: 980px;
+    }
+
+    .key-brands__wrapper div:nth-last-child(-n+2){
+        display: none;
+    }
+
+    .header__main-part__search{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 980px){
+    .wrapper{
+        width: 750px;
+    }
+
+    .key-brands__wrapper div:nth-last-child(-n+4){
+        display: none;
+    }
+
+    .we-in-numbers__items .we-in-numbers__items__wrap:nth-last-child(-n+2){
+        display: none;
+    }
+
+    .buying__items div:nth-last-child(-n+1){
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 749px){
     .wrapper{
         width: 320px;
+    }
+
+    .header__main-part__slogan__link{
+        font-size: 32px;
     }
 
     .info{
@@ -570,15 +610,15 @@ body {
         display: none;
     }
 
-    .five-reasons{
-        display: none;
-    }
-
     .strengths{
         display: none;
     }
 
-    .key-brands{
+    .five-reasons{
+        display: none;
+    }
+
+    .news-and-slider{
         display: none;
     }
 
@@ -586,7 +626,23 @@ body {
         display: none;
     }
 
-    .news-and-slider{
+    .key-brands{
         display: none;
+    }
+
+    .slogan{
+        display: none;
+    }
+
+    .cloud{
+        display: none;
+    }
+
+    .how-to-work-with-us__types li{
+        font-size: 10px;
+    }
+
+    .how-to-work-with-us__instruction__point{
+        font-size: 10px;
     }
 }
