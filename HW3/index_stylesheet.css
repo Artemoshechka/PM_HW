@@ -1,0 +1,592 @@
+body {
+    font-family: 'Roboto',sans-serif;
+    color: #040d0d;
+    font-size: 15px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1140px;
+}
+
+/*Стили для заголовков*/
+.line-with-text hr{
+    border: 1px solid #e4e6ec;
+}
+
+.line-with-text{
+    position: relative;
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+.line-with-text__l{
+    position: absolute;
+    left: 0;
+    top: 18px;
+    background: #ffffff;
+    padding-right: 10px;
+    font-size: 22px;
+}
+
+.line-with-text__r{
+    position: absolute;
+    right: 0;
+    top: 22px;
+    background: #ffffff;
+    padding-left: 10px;
+    font-size: 15px;
+}
+/*Конец*/
+.header__top-part{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.header__main-part{
+    padding-top: 16px;
+}
+
+.dotted{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.header__top__part__login a:hover{
+    color: #ff5600;
+}
+
+.header__main-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__main-part__slogan__link{
+    font-size: 46px;
+    color: #040d0d;
+    text-decoration: none;
+}
+
+.header__main-part__slogan{
+    padding-top: 20px;
+}
+
+.header__main-part__slogan__link:hover{
+    color: #ff5600;
+}
+
+.my_bg{
+    color: #ff5600;
+    background-image: url("images/cool_bg.jpg");
+    border-radius: 10px;
+    margin: 0 3px;
+}
+
+.slogan{
+    font-size: 11px;
+    color: #818588;
+}
+
+.header__main-part__contacts img{
+    float: left;
+}
+
+.phone_number{
+    font-size: 22px;
+}
+
+.smaller{
+    font-size: 12px;
+}
+
+.header__main-part__search__text{
+    margin-bottom: 10px;
+}
+
+.header__main-part__search__text img{
+    float: left;
+    padding-top: 15px;
+}
+
+.header__main-part__search{
+    font-size: 20px;
+    width: 320px;
+    font-style: italic;
+}
+
+.orange{
+    color: #ff5600;
+}
+
+.input{
+    border: none;
+    background: #e3e5eb;
+    width: 70%;
+    height: 28px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+.button{
+    float: right;
+    border: none;
+    border-radius: 3px;
+    height: 26px;
+    background: #ff5816;
+    color: #ffffff;
+    padding: 3px 10px;
+    margin-top: 1px;
+    margin-right: 35px;
+}
+
+.header__main-part__cart{
+    height: 100px;
+    width: 200px;
+}
+
+.header__main-part__cart a{
+    text-decoration: none;
+    color: #040d0d;
+}
+
+.header__main-part__cart__cart{
+    padding: 12px 15px;
+    text-align: right;
+    background-image: url("images/cool_bg.jpg");
+    border-radius: 5px;
+}
+
+.header__main-part__cart__cart:hover{
+    color: #ff5600;
+}
+
+.header__main-part__cart__cart svg{
+    height: 22px;
+    width: 26px;
+    fill: #ff5600;
+    float: left;
+    margin-top: 7px;
+}
+
+/*Блок новости+слайдер+крутой текст*/
+.news-and-slider{
+    margin-top: 15px;
+}
+
+.news-and-slider__right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-and-slider__right__slider{
+    position: relative;
+    background-image: url(images/slider.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+}
+
+.previous-button{
+    position: absolute;
+    width: 16px;
+    height: 44px;
+    top: 163px;
+    left: 18px;
+    cursor: pointer;
+}
+
+.next-button{
+    position: absolute;
+    width: 16px;
+    height: 44px;
+    top: 163px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.news-and-slider__right__slider__more{
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+    background: #ffffff;
+    color: #4673ab;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #c4c4c4 2px solid;
+    border-radius: 5px;
+    padding: 12px 30px;
+}
+
+.news-and-slider__right__slider__more:hover{
+    background: #e3e5eb;
+    cursor: pointer;
+}
+
+.slider_dots{
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+}
+
+.slider_dots li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    border-radius: 3px;
+}
+
+.slider_dots .active{
+    background: #ff5600;
+}
+
+.news-and-slider__right__cool-text{
+    border-radius: 10px;
+    background: #e3e5eb;
+    text-align: center;
+    font-style: italic;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.news-and-slider__right__cool-text__blue{
+    color: #4673ab;
+    font-weight: bold;
+}
+/*Конец блока*/
+
+/*Блок про "Что покупают прямо сейчас"*/
+.buying{
+    padding-bottom: 30px;
+}
+
+.buying__items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buying__items__wrap{
+    width: 228px;
+}
+
+.buying__items__wrap__image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 228px;
+    margin-bottom: 10px;
+}
+
+.buying__items__wrap__image img{
+    width: 100%;
+}
+
+.buying__items__wrap a{
+    color: #4673ab;
+    font-weight: bold;
+}
+
+.buying__items__wrap a:hover{
+    color: #2a507a;
+    font-weight: bold;
+}
+/*Конец*/
+
+/*Блок про "Наши ключевые бренды"*/
+.key-brands__wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.key-brands__wrapper .key-brands__wrapper__brand-logo{
+    width: 120px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.key-brands__wrapper img{
+    margin: 20px auto;
+    width: 100%;
+}
+/*Конец блока*/
+
+/*Блок про "Наши сильные стороны"*/
+.strengths{
+    background: #e4e6ec;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+.strengths hr{
+    border: 1px solid white;
+    margin-right: 20px;
+}
+
+.strengths .line-with-text__l{
+    background: #e4e6ec;
+    padding-left: 20px;
+}
+
+.strengths__icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 110px;
+}
+
+.strengths__icons__items{
+    width: 150px;
+}
+
+.strengths__icons__items__logo{
+    background: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 25px;
+    margin: 0 auto;
+}
+
+.strengths__icons__items__text{
+    font-size: 11px;
+    text-align: center;
+    padding: 15px 0;
+}
+/*Конец блока*/
+
+/*Блок про "5 причин выбрать нашу компанию"*/
+.five-reasons__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.five-reasons__bad{
+    border: 1px solid #ffbfc1;
+    border-radius: 10px;
+}
+
+.five-reasons__bad__head{
+    height: 75px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #cc030b;
+    padding-top: 13px;
+    color: white;
+    font-size: 15px;
+}
+
+.five-reasons__bad__head svg{
+    fill:white;
+    height: 23px;
+    margin: 14px 20px 10px 20px;
+    float: left;
+}
+
+.five-reasons__bad__ul{
+    padding-left: 30px;
+    font-size: 15px;
+    margin: 0 10px;
+}
+
+.five-reasons__bad__ul li{
+    color: #cc030b;
+    padding: 5px 15px;
+}
+
+.five-reasons__bad__ul li span{
+    color: #040d0d;
+}
+
+.five-reasons__good{
+    border: 1px solid #a1d4ac;
+    border-radius: 10px;
+}
+
+.five-reasons__good__head{
+    height: 75px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #0ea430;
+    padding-top: 30px;
+    color: white;
+    font-size: 15px;
+}
+
+.five-reasons__good__head svg{
+    fill:white;
+    height: 23px;
+    margin: -3px 20px 10px 20px;
+    float: left;
+}
+
+.five-reasons__good__ul{
+    padding-left: 30px;
+    font-size: 15px;
+    margin: 0 10px;
+}
+
+.five-reasons__good__ul li{
+    color: #0ea430;
+    padding: 5px 15px;
+}
+
+.five-reasons__good__ul li span{
+    color: #040d0d;
+}
+/*Конец блока*/
+
+/*Блок про "Мы в цифрах"*/
+.we-in-numbers__items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.we-in-numbers__items__wrap__number{
+    border: 1px solid #dbdee6;
+    border-radius: 50%;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    width: 130px;
+    height: 130px;
+    padding-top: 30px;
+}
+
+.we-in-numbers__items__wrap__text{
+    font-size: 11px;
+    text-align: center;
+    padding: 15px 0;
+    bottom: 0;
+}
+
+.we-in-numbers__items__wrap__number__orange{
+    color: #ff5600;
+}
+
+.we-in-numbers__items__wrap__number__blue{
+    color: #36495c;
+}
+
+#big_number{
+    padding-top: 15px;
+    font-size: 30px;
+}
+/*Конец блока*/
+
+/*Блок про "Как с нами работать"*/
+.how-to-work-with-us__types{
+    padding-bottom: 30px;
+}
+
+
+.how-to-work-with-us__types li{
+    display: inline;
+    background: #dcdfe7;
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: #ff5600;
+    margin: 0 1px;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    font-size: 13px;
+}
+
+.how-to-work-with-us__types li:hover{
+    background: #ffffff;
+    text-decoration-color: #ff5600;
+    color: #040d0d;
+}
+
+#how-to-work-with-us__types__active{
+    background: #ffffff;
+    text-decoration: none;
+    color: #040d0d;
+}
+
+.how-to-work-with-us_instruction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.how-to-work-with-us__instruction__point{
+    width: 285px;
+}
+
+.how-to-work-with-us__instruction__point__left-image{
+    float: left;
+    margin: 5px 5px 50px 0;
+}
+
+.how-to-work-with-us__instruction__point__right-image{
+    float: right;
+    margin-bottom: -20px;
+}
+/*Конец блока*/
+
+/*Блок про инфо снизу*/
+.info{
+    column-count:2;
+    padding-top: 15px;
+}
+
+.info p{
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.5em;
+}
+
+.info a{
+    color: #ff5600;
+}
+/*Конец блока*/
+
+@media screen and (max-width: 750px){
+    .wrapper{
+        width: 320px;
+    }
+
+    .info{
+        display: none;
+    }
+
+    .we-in-numbers{
+        display: none;
+    }
+
+    .five-reasons{
+        display: none;
+    }
+
+    .strengths{
+        display: none;
+    }
+
+    .key-brands{
+        display: none;
+    }
+
+    .buying{
+        display: none;
+    }
+
+    .news-and-slider{
+        display: none;
+    }
+}
