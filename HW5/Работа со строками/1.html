@@ -1,0 +1,8 @@
+<script>
+    let str = prompt("Enter the first string:", undefined);
+    let target = prompt("Enter the second string:", undefined);
+    let pos = -1;
+    while ((pos = str.indexOf(target, pos + 1)) !== -1) {
+        alert(pos);
+    }
+</script>

@@ -1,0 +1,16 @@
+<script>
+    function random_integer(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    let n = prompt("Enter n value:", undefined);
+    let m = prompt("Enter m value:", undefined);
+    if (isNaN(Number(n)) === true || isNaN(Number(m)) === true){
+        alert('At least one of arguments is undefined or NaN')
+    }
+    else{
+        alert(random_integer(n,m))
+    }
+</script>

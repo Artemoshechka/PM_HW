@@ -1,0 +1,16 @@
+<script>
+    let exp = (a, b) => a**b
+    let expo = function (a, b){
+        return a**b
+    }
+    let n = prompt("Enter n value:", undefined);
+    let m = prompt("Enter m value:", undefined);
+    if (isNaN(Number(n)) === true || isNaN(Number(m)) === true) {
+        alert('At least one of arguments is undefined or NaN')
+    }
+    else {
+        n = Number(n)
+        m = Number(m)
+        alert('Arrow: ' + exp(n,m) + '\nExpression: ' + expo(n, m))
+    }
+</script>

@@ -1,0 +1,23 @@
+<script>
+    let n = prompt("Enter n value:", undefined);
+    let m = prompt("Enter m value:", undefined);
+    if (isNaN(Number(n)) === true || isNaN(Number(m)) === true){
+        alert('At least one of arguments is undefined or NaN, nothing to withdraw');
+    }
+    else{
+        n = Math.floor(Number(n));
+        m = Math.floor(Number(m));
+        if (m - n < 2){
+            alert("Nothing to withdraw\nPossible reasons:\n1. N is greater then M\n2. N equals M\n3. There are no integers between N and M");
+        }
+        else{
+            let arr = []
+            n++
+            while (n < m){
+                arr.push(n)
+                n++
+            }
+            alert(arr)
+        }
+    }
+</script>
