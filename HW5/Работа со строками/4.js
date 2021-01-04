@@ -11,7 +11,7 @@ let str = "<!DOCTYPE html>\n" +
     "    -->\n" +
     "  <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\">\n" +
     "  <link rel=\"shortcut icon\" href=\"%PUBLIC_URL%/favicon.ico\">\n" +
-    "  <h1> <h1>\n" +
+    "  <h1> </h1>\n" +
     "\n" +
     "  <script type=\"text/javascript\">\n" +
     "    console.log('gtm')\n" +
@@ -73,9 +73,9 @@ let str = "<!DOCTYPE html>\n" +
     "    You need to enable JavaScript to run this app.\n" +
     "  </noscript>\n" +
     "  <div id=\"⚛️\" style=\"height: 100%\">\n" +
-    "    <h1>Contacts page <h1>\n" +
-    "    <h1>Feeel free to contact<h1>\n" +
-    "    <h1>Support <h1>\n" +
+    "    <h1>Contacts page </h1>\n" +
+    "    <h1>Feeel free to contact</h1>\n" +
+    "    <h1>Support </h1>\n" +
     "        \n" +
     "        \n" +
     "    <h2>H2 tag</h2>\n" +
@@ -101,17 +101,20 @@ let str = "<!DOCTYPE html>\n" +
     "</body>\n" +
     "</html>"
 
-reg_hex = /#[a-f\d]{3,6}/gmi
+let reg_hex = /#[a-f\d]{3,6}/gmi
 console.log(str.match(reg_hex));
-reg_phones = /\+ \(380\) 0(50|63|66|67|68|73|93|95|96|97|98|99) \d{3} \d{2} \d{2}/gm
+let reg_phones = /\+ \(380\) 0(50|63|66|67|68|73|93|95|96|97|98|99) \d{3} \d{2} \d{2}/gm
 console.log(str.match(reg_phones));
 
 //Optional tasks
 
-//Replace all <h1> tags with <h2/> tags
-reg_h1 = /<h1>/gm
-console.log(str.replace(reg_h1, "<h2/>"));
+//Replace all <h1> tags with <h2> tags
+let reg_h1_open = /<h1>/gmi
+let reg_h1_close = /<\/h1>/gmi
+let str_h1_replaced = str.replace(reg_h1_open, "<h2>")
+str_h1_replaced = str_h1_replaced.replace(reg_h1_close, "</h2>")
+console.log(str_h1_replaced)
 
 //Search for all <script></script> tags
-reg_script = /<\/?script(.+)?>/gmi
+let reg_script = /<script(.+)?>([\s\S]*)?<\/script>/gmi
 console.log(str.match(reg_script));
