@@ -39,6 +39,8 @@ body {
     font-size: 15px;
 }
 /*Конец*/
+
+/*Хедэр*/
 .header__top-part{
     display: flex;
     justify-content: space-between;
@@ -155,7 +157,7 @@ body {
 
 .header__main-part__cart__cart{
     padding: 12px 15px;
-    text-align: right;
+    text-align: left;
     background-image: url("images/cool_bg.jpg");
     border-radius: 5px;
 }
@@ -170,7 +172,9 @@ body {
     fill: #ff5600;
     float: left;
     margin-top: 7px;
+    margin-right: 16px;
 }
+/*Конец*/
 
 /*Блок новости+слайдер+крутой текст*/
 .news-and-slider{
@@ -395,9 +399,10 @@ body {
 }
 
 .five-reasons__bad__ul{
+    padding-top: 25px;
     padding-left: 30px;
     font-size: 15px;
-    margin: 0 10px;
+    margin: 0 10px 0 5px;
 }
 
 .five-reasons__bad__ul li{
@@ -433,8 +438,9 @@ body {
 
 .five-reasons__good__ul{
     padding-left: 30px;
+    padding-top: 25px;
     font-size: 15px;
-    margin: 0 10px;
+    margin: 0 10px 0 5px;
 }
 
 .five-reasons__good__ul li{
@@ -494,7 +500,6 @@ body {
     flex-wrap: wrap;
 }
 
-
 .how-to-work-with-us__types li{
     display: inline;
     background: #dcdfe7;
@@ -521,20 +526,17 @@ body {
 }
 
 .how-to-work-with-us_instruction{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
     justify-content: space-between;
-    gap: 30px;
     padding-top: 20px;
-}
-
-.how-to-work-with-us__instruction__point{
-    width: 200px;
+    font-size: 15px;
 }
 
 .how-to-work-with-us__instruction__point__left-image{
     float: left;
-    margin: 5px 5px 50px 0;
+    margin: 0 5px 70px 0;
 }
 /*Конец блока*/
 
@@ -558,6 +560,14 @@ body {
 @media only screen and (max-width: 2000px){
     .wrapper{
         width: 1140px;
+    }
+
+    .five-reasons__bad__head{
+        padding-top: 22px;
+    }
+
+    .five-reasons__bad__head svg{
+        margin-top: 5px;
     }
 }
 
@@ -590,6 +600,22 @@ body {
 
     .buying__items div:nth-last-child(-n+1){
         display: none;
+    }
+
+    .five-reasons__good__head svg{
+        margin-top: 5px;
+    }
+
+    .five-reasons__good__head{
+        padding-top: 20px;
+    }
+
+    .five-reasons__bad__head{
+        padding-top: 13px;
+    }
+
+    .five-reasons__bad__head svg{
+        margin-top: 13px;
     }
 }
 
@@ -638,8 +664,14 @@ body {
         display: none;
     }
 
+    .how-to-work-with-us_instruction{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
     .how-to-work-with-us__types li{
-        font-size: 10px;
+        font-size: 12px;
+        margin-bottom: 2px;
     }
 
     .how-to-work-with-us__instruction__point{
