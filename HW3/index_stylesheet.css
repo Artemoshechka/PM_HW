@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto Light',sans-serif;
     color: #040d0d;
     font-size: 16px;
 }
@@ -48,10 +48,6 @@ body {
     margin-top: 12px;
 }
 
-.header__main-part{
-    padding-top: 16px;
-}
-
 .dotted{
     text-decoration: underline;
     text-decoration-style: dotted;
@@ -62,9 +58,10 @@ body {
 }
 
 .header__main-part{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
     justify-content: space-between;
+    padding-top: 16px;
 }
 
 .header__main-part__slogan__link{
@@ -120,6 +117,13 @@ body {
     font-style: italic;
 }
 
+.header__main-part__search-icon{
+    display: none;
+    height: 22px;
+    width: 26px;
+    padding-top: 18px;
+}
+
 .orange{
     color: #ff5600;
 }
@@ -143,6 +147,7 @@ body {
     padding: 3px 10px;
     margin-top: 1px;
     margin-right: 35px;
+    cursor:pointer;
 }
 
 .header__main-part__cart{
@@ -174,6 +179,11 @@ body {
     margin-top: 7px;
     margin-right: 16px;
 }
+
+.header__main-part__mobile-icons{
+    display: none;
+}
+
 /*Конец*/
 
 /*Блок новости+слайдер+крутой текст*/
@@ -310,12 +320,13 @@ body {
 .key-brands__wrapper{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .key-brands__wrapper .key-brands__wrapper__brand-logo{
     width: 120px;
     height: 100px;
-    margin-right: 20px;
 }
 
 .key-brands__wrapper img{
@@ -503,10 +514,10 @@ body {
 .how-to-work-with-us__types li{
     display: inline;
     background: #dcdfe7;
-    border-radius: 5px;
-    padding: 15px 20px;
+    border-radius: 7px;
+    padding: 13px;
     color: #ff5600;
-    margin: 0 1px;
+    margin: 0 3px;
     text-decoration: underline;
     text-decoration-style: dotted;
     font-size: 13px;
@@ -583,11 +594,19 @@ body {
     .header__main-part__search{
         display: none;
     }
+
+    .header__main-part__search-icon{
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 980px){
     .wrapper{
         width: 750px;
+    }
+
+    .cloud{
+        display: none;
     }
 
     .key-brands__wrapper div:nth-last-child(-n+4){
@@ -624,8 +643,84 @@ body {
         width: 320px;
     }
 
+    .line-with-text{
+        padding-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .header__main-part{
+        padding-top: 20px;
+        grid-template-columns: repeat(2, 160px);
+        grid-template-rows: repeat(2, 55px);
+    }
+
+    .header__main-part__slogan{
+        padding: 0;
+    }
+
     .header__main-part__slogan__link{
-        font-size: 32px;
+        font-size: 34px;
+    }
+
+    #work-hours{
+        display: none;
+    }
+
+    .header__main-part__contacts a{
+        display: none;
+    }
+
+    .phone_number{
+        font-size: 19px;
+    }
+
+    .smaller{
+        font-size: 14px;
+    }
+
+    .header__main-part__contacts{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        line-height: 15px;
+    }
+
+    .header__main-part__mobile-icons{
+        display: block;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .header__main-part__mobile-icons svg{
+        height: 31px;
+        width: 31px;
+        fill: #ff5600;
+        float: right;
+    }
+
+    .header__main-part__mobile-icons img{
+        float: right;
+        margin-top: 2px;
+        margin-right: 21px;
+        height: 28px;
+        width: 31px;
+    }
+
+    .header__main-part__skype-mail{
+        text-align: right;
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    .header__main-part__search-icon{
+        display: none;
+    }
+
+    .header__main-part__cart{
+        display: none;
     }
 
     .info{
@@ -660,18 +755,14 @@ body {
         display: none;
     }
 
-    .cloud{
-        display: none;
-    }
-
     .how-to-work-with-us_instruction{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
 
     .how-to-work-with-us__types li{
-        font-size: 12px;
-        margin-bottom: 2px;
+        font-size: 13px;
+        margin: 3px;
     }
 
     .how-to-work-with-us__instruction__point{
