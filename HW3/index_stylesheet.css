@@ -184,6 +184,10 @@ body {
     display: none;
 }
 
+.header__main-part__skype-mail{
+    display: none;
+}
+
 /*Конец*/
 
 /*Блок новости+слайдер+крутой текст*/
@@ -710,6 +714,7 @@ body {
     }
 
     .header__main-part__skype-mail{
+        display: block;
         text-align: right;
         font-size: 14px;
         line-height: 15px;
