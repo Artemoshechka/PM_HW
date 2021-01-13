@@ -90,6 +90,14 @@ body {
     color: #818588;
 }
 
+.cloud{
+    margin-bottom: 20px;
+}
+
+.small__images{
+    height: 19px;
+}
+
 .header__main-part__contacts img{
     float: left;
 }
