@@ -219,6 +219,10 @@ body {
 .skype-float__text{
     margin-top: 2px;
 }
+
+.skype-float{
+    margin-right: 3px;
+}
 /*Конец*/
 
 /*Блок новости+слайдер+крутой текст*/
