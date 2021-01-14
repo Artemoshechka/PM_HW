@@ -184,6 +184,26 @@ body {
     margin-right: 16px;
 }
 
+.header__main-part__cart__fav-match{
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    font-size: 11.5px;
+}
+
+.header__main-part__cart__fav-match a{
+    border-bottom: #4673ab 1px dotted;
+    padding-bottom: 5px;
+}
+
+#chosen{
+    margin-right: 20px;
+}
+
+.header__main-part__cart__fav-match img{
+    vertical-align: middle;
+}
+
 .header__main-part__mobile-icons{
     display: none;
 }
@@ -568,7 +588,7 @@ body {
 
 /*Блок про инфо снизу*/
 .info{
-    column-count:2;
+    column-count: 2;
     padding-top: 15px;
 }
 
@@ -583,7 +603,7 @@ body {
 }
 /*Конец блока*/
 
-@media only screen and (max-width: 2000px){
+@media only screen and (min-width: 1140px){
     .wrapper{
         width: 1140px;
     }
@@ -597,15 +617,12 @@ body {
     }
 }
 
-@media only screen and (max-width: 1140px){
+@media only screen and (max-width: 1139px){
     .wrapper{
         width: 980px;
     }
 
-    .key-brands__wrapper div:nth-last-child(-n+2){
-        display: none;
-    }
-
+    .key-brands__wrapper div:nth-last-child(-n+2),
     .header__main-part__search{
         display: none;
     }
@@ -620,18 +637,8 @@ body {
         width: 750px;
     }
 
-    .cloud{
-        display: none;
-    }
-
-    .key-brands__wrapper div:nth-last-child(-n+4){
-        display: none;
-    }
-
-    .we-in-numbers__items .we-in-numbers__items__wrap:nth-last-child(-n+2){
-        display: none;
-    }
-
+    .cloud, .key-brands__wrapper div:nth-last-child(-n+4),
+    .we-in-numbers__items .we-in-numbers__items__wrap:nth-last-child(-n+2),
     .buying__items div:nth-last-child(-n+1){
         display: none;
     }
@@ -658,6 +665,12 @@ body {
         width: 320px;
     }
 
+    #work-hours, .header__main-part__contacts a, .header__main-part__search-icon,
+    .header__main-part__cart, .info, .we-in-numbers, .strengths, .five-reasons,
+    .news-and-slider, .buying, .key-brands, .slogan{
+        display: none;
+    }
+
     .line-with-text{
         padding-top: 20px;
         margin-bottom: 40px;
@@ -675,14 +688,6 @@ body {
 
     .header__main-part__slogan__link{
         font-size: 34px;
-    }
-
-    #work-hours{
-        display: none;
-    }
-
-    .header__main-part__contacts a{
-        display: none;
     }
 
     .phone_number{
@@ -729,46 +734,6 @@ body {
         text-align: right;
         font-size: 14px;
         line-height: 15px;
-    }
-
-    .header__main-part__search-icon{
-        display: none;
-    }
-
-    .header__main-part__cart{
-        display: none;
-    }
-
-    .info{
-        display: none;
-    }
-
-    .we-in-numbers{
-        display: none;
-    }
-
-    .strengths{
-        display: none;
-    }
-
-    .five-reasons{
-        display: none;
-    }
-
-    .news-and-slider{
-        display: none;
-    }
-
-    .buying{
-        display: none;
-    }
-
-    .key-brands{
-        display: none;
-    }
-
-    .slogan{
-        display: none;
     }
 
     .how-to-work-with-us_instruction{
