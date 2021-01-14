@@ -394,15 +394,13 @@ body {
 
 /*Оранжевая менюха*/
 .products{
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
     margin-top: 30px;
     padding: 0 10px;
     background: #c44411;
-    grid-template-columns: repeat(10, 1fr);
-    display: grid;
-    color: #fff;
+    color: #ffffff;
     border-radius: 8px;
-    overflow: hidden;
     text-transform: uppercase;
     font-size: 11px;
 }
