@@ -816,7 +816,6 @@ body{
 /*Блок про инфо снизу*/
 .info{
     column-count: 2;
-    padding-top: 15px;
 }
 
 .info p{
@@ -833,6 +832,29 @@ body{
     color: #ff5600;
 }
 /*Конец блока*/
+
+.lower-footer{
+    padding: 18px 0;
+    width: 100%;
+    background: #2c3f53;
+    color: #c8d4dc;
+    font-size: 11px;
+    line-height: 21px;
+}
+
+.lower-footer .wrapper{
+    position: relative;
+}
+
+.lower-footer p{
+    width: 75%;
+}
+
+.stats{
+    position: absolute;
+    top: 0;
+    right: 75px;
+}
 
 @media only screen and (min-width: 1140px){
     .wrapper{
@@ -918,7 +940,7 @@ body{
     #work-hours, .header__main-part__contacts a, .header__main-part__search-icon,
     .header__main-part__cart, .info, .we-in-numbers, .strengths, .five-reasons,
     .news-and-slider, .buying, .key-brands, .slogan, .line-with-text__r,
-    .products-list__items__wrap:nth-last-child(-n+3){
+    .products-list__items__wrap:nth-last-child(-n+3), .lower-footer p{
         display: none;
     }
 
@@ -1003,5 +1025,11 @@ body{
 
     .how-to-work-with-us__instruction__point{
         font-size: 10px;
+    }
+
+    .stats{
+        margin: 0 auto;
+        position: relative;
+        right: 0;
     }
 }
