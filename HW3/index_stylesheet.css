@@ -192,6 +192,13 @@ body {
     display: none;
 }
 
+.skype-float, .skype-float__text{
+    float: right;
+}
+
+.skype-float__text{
+    margin-top: 2px;
+}
 /*Конец*/
 
 /*Блок новости+слайдер+крутой текст*/
