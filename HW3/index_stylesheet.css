@@ -70,9 +70,6 @@ body {
     text-decoration: none;
 }
 
-.header__main-part__slogan{
-    padding-top: 20px;
-}
 
 .header__main-part__slogan__link:hover{
     color: #ff5600;
@@ -226,10 +223,88 @@ body {
 /*Конец*/
 
 /*Блок новости+слайдер+крутой текст*/
+/*Новости*/
 .news-and-slider{
-    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-column-gap: 30px;
+    margin-top: 20px;
 }
 
+.news_header{
+    font-size: 21px;
+    font-weight: normal;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e3e5eb;
+    margin-bottom: 30px;
+}
+
+.all-news-link{
+    color: #4673ab;
+    text-decoration: none;
+}
+
+.all-news-link:hover{
+    color: #ff5816;
+    text-decoration: underline #ff5816;
+}
+
+.news-preview{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #e3e5eb;
+    margin-bottom: 20px;
+}
+
+.news-preview a{
+    color: #040d0d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.news-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.news-date{
+    margin-top: -20px;
+    text-align: center;
+}
+
+.date-num{
+    display: inline-block;
+    background: #ffffff;
+    width: 36px;
+    height: 28px;
+    line-height: 28px;
+    color: #ff5816;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.news-text{
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.news-text .news-title{
+    color: #4673ab;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.news-title:hover{
+    color: #ff5816;
+    text-decoration: #ff5816 underline;
+}
+
+/*Слоган + слайдер*/
 .news-and-slider__right{
     display: flex;
     flex-direction: column;
@@ -286,7 +361,7 @@ body {
 .slider_dots{
     position: absolute;
     bottom: 30px;
-    right: 60px;
+    right: 30px;
 }
 
 .slider_dots li{
@@ -317,6 +392,38 @@ body {
 }
 /*Конец блока*/
 
+/*Оранжевая менюха*/
+.products{
+    position: relative;
+    margin-top: 30px;
+    padding: 0 10px;
+    background: #c44411;
+    grid-template-columns: repeat(10, 1fr);
+    display: grid;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.products__category{
+    background: #ff5600;
+    padding: 10px;
+    border-bottom: #c44411 3px solid;
+}
+
+.products__category a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.products__category:hover{
+    border-bottom: #ff743d 3px solid;
+    background: #ff743d;
+    cursor: pointer;
+    text-decoration: underline;
+}
 /*Блок про "Что покупают прямо сейчас"*/
 .buying{
     padding-bottom: 30px;
@@ -626,6 +733,11 @@ body {
         width: 980px;
     }
 
+    .news-and-slider__right__slider{
+        background-image: url("images/slider_980px.jpg");
+    }
+
+    .products,
     .key-brands__wrapper div:nth-last-child(-n+2),
     .header__main-part__search{
         display: none;
@@ -634,11 +746,21 @@ body {
     .header__main-part__search-icon{
         display: block;
     }
+
+    .news-and-slider__right__cool-text{
+        font-size: 13px;
+        padding: 18px;
+    }
 }
 
 @media only screen and (max-width: 980px){
     .wrapper{
         width: 750px;
+    }
+
+    .news-and-slider__right__cool-text{
+        font-size: 9px;
+        padding: 18px 2px;
     }
 
     .cloud, .key-brands__wrapper div:nth-last-child(-n+4),
@@ -661,6 +783,10 @@ body {
 
     .five-reasons__bad__head svg{
         margin-top: 13px;
+    }
+
+    .news-and-slider__right__slider{
+        background-image: url("images/slider_750px.jpg");
     }
 }
 
