@@ -104,8 +104,33 @@ body{
     color: #818588;
 }
 
+.cloud{
+    margin-bottom: 40px;
+}
+
 .small__images{
-    height: 19px;
+    height: 20px;
+}
+
+.small__images img{
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.header__main-part__contacts{
+    position: relative;
+}
+
+.callback{
+    position: absolute;
+    font-size: 12px;
+    text-align: center;
+    top: 12px;
+    left: 16px;
+}
+
+.callback a{
+    text-decoration-style: dotted;
 }
 
 .header__main-part__contacts img{
@@ -113,7 +138,7 @@ body{
 }
 
 .phone_number{
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .smaller{
@@ -833,6 +858,78 @@ body{
 }
 /*Конец блока*/
 
+.footer{
+    width: 100%;
+    background: #5c7489;
+    margin-top: 70px;
+    padding-top: 41px;
+    padding-bottom: 10px;
+}
+
+.footer__wrapper{
+    margin: 0 auto;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 23% 21% 16% auto;
+}
+
+.footer__wrapper p{
+    color: #c8d4dc;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.footer__wrapper__logo__link{
+    font-size: 40px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer__slogan{
+    font-size: 9px;
+    color: #b9c7d0;
+}
+
+.map{
+    font-size: 13px;
+    color: #c8d4dc;
+}
+
+.footer__wrapper__services{
+    list-style-type: none;
+    color: #c8d4dc;
+}
+
+.footer__wrapper__services li{
+    text-decoration: underline;
+    padding-bottom: 3px;
+    font-size: 13px;
+}
+
+.footer__wrapper__contacts p{
+    color: #ffffff;
+}
+
+.footer__wrapper__contacts__messengers{
+    height: 50px;
+    line-height: 20px;
+}
+
+.footer__wrapper__contacts__messengers img{
+    float: left;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+.footer__wrapper__contacts__messengers .smaller{
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.footer__wrapper__contacts__messengers a{
+    text-decoration: none;
+}
+
 .lower-footer{
     padding: 18px 0;
     width: 100%;
@@ -868,6 +965,12 @@ body{
     .five-reasons__bad__head svg{
         margin-top: 5px;
     }
+
+    .footer__wrapper{
+        width: 1140px;
+    }
+
+
 }
 
 @media only screen and (max-width: 1139px){
@@ -893,6 +996,10 @@ body{
         font-size: 13px;
         padding: 18px;
     }
+
+    .footer__wrapper{
+        width: 980px;
+    }
 }
 
 @media only screen and (max-width: 980px){
@@ -907,7 +1014,8 @@ body{
 
     .cloud, .key-brands__wrapper div:nth-last-child(-n+4),
     .we-in-numbers__items .we-in-numbers__items__wrap:nth-last-child(-n+2),
-    .buying__items div:nth-last-child(-n+1), .products-list__items__wrap:nth-last-child(-n+1){
+    .buying__items div:nth-last-child(-n+1), .products-list__items__wrap:nth-last-child(-n+1),
+    .callback{
         display: none;
     }
 
@@ -930,6 +1038,10 @@ body{
     .news-and-slider__right__slider{
         background-image: url("images/slider_750px.jpg");
     }
+
+    .footer__wrapper{
+        width: 750px;
+    }
 }
 
 @media only screen and (max-width: 749px){
@@ -937,10 +1049,11 @@ body{
         width: 320px;
     }
 
-    #work-hours, .header__main-part__contacts a, .header__main-part__search-icon,
+    .work-hours, .header__main-part__contacts a, .header__main-part__search-icon,
     .header__main-part__cart, .info, .we-in-numbers, .strengths, .five-reasons,
     .news-and-slider, .buying, .key-brands, .slogan, .line-with-text__r,
-    .products-list__items__wrap:nth-last-child(-n+3), .lower-footer p{
+    .products-list__items__wrap:nth-last-child(-n+3), .lower-footer p,
+    .footer__wrapper__address, .footer__wrapper__services{
         display: none;
     }
 
@@ -968,7 +1081,7 @@ body{
     }
 
     .phone_number{
-        font-size: 19px;
+        font-size: 17px;
     }
 
     .smaller{
@@ -1025,6 +1138,41 @@ body{
 
     .how-to-work-with-us__instruction__point{
         font-size: 10px;
+    }
+
+    .footer{
+        margin-top: 0;
+    }
+
+    .footer__wrapper{
+        width: 320px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .footer__wrapper__logo{
+        width: 160px;
+    }
+
+    .footer__wrapper__logo__link{
+        font-size: 35px;
+    }
+
+    .footer__slogan{
+        font-size: 7px;
+    }
+
+    .footer__wrapper__logo p{
+        font-size: 11px;
+    }
+
+    .footer__wrapper__contacts .smaller{
+        font-size: 11px;
+    }
+
+    .footer__wrapper__contacts .phone_number{
+        font-size: 18px;
     }
 
     .stats{
