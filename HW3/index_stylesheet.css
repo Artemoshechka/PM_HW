@@ -936,6 +936,7 @@ body{
 /*Блок про инфо снизу*/
 .info{
     column-count: 2;
+    margin-bottom: 70px;
 }
 
 .info p{
@@ -956,7 +957,6 @@ body{
 .footer{
     width: 100%;
     background: #5c7489;
-    margin-top: 70px;
     padding-top: 41px;
     padding-bottom: 10px;
 }
@@ -1048,6 +1048,28 @@ body{
     right: 75px;
 }
 
+.service__mobile{
+    display: none;
+}
+
+.service__mobile ul{
+    list-style-type: none;
+    color: #c8d4dc;
+}
+
+.service__mobile li{
+    padding: 10px 0;
+    background: #5c7489;
+    font-size: 13px;
+    border-bottom: 1px solid #dbdee6;
+}
+
+.service__mobile li img{
+    float: right;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
 @media only screen and (min-width: 1140px){
     .topMenu > a {
         display: none;
@@ -1080,8 +1102,6 @@ body{
     .footer__wrapper{
         width: 1140px;
     }
-
-
 }
 
 @media only screen and (max-width: 1139px){
@@ -1256,7 +1276,7 @@ body{
     }
 
     .footer__wrapper{
-        width: 320px;
+        width: 90%;
         display: flex;
         flex-direction: row;
         gap: 5px;
@@ -1283,12 +1303,16 @@ body{
     }
 
     .footer__wrapper__contacts .phone_number{
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .stats{
         margin: 0 auto;
         position: relative;
         right: 0;
+    }
+
+    .service__mobile{
+        display: block;
     }
 }
