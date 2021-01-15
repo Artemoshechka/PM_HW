@@ -55,6 +55,33 @@ body{
 .line-with-text__r a:hover{
     color: #ff5600;
 }
+
+.buttons{
+    position: absolute;
+    right: 0;
+    top: 17px;
+    background: #ffffff;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.buttons__small-button{
+    height: 30px;
+    width: 30px;
+    padding-top: 5px;
+    border: 2px solid #dbdee6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buttons__small-button:hover{
+    border-color: #ff5600;
+}
+
 /*Конец*/
 
 .menu__wrapper{
@@ -661,6 +688,84 @@ body{
     color: #4673ab;
 }
 
+.promosWrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.promoWrapper{
+    display: flex;
+    height: 380px;
+    width: 228px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #bdc3c5;
+    border-radius: 15px;
+}
+
+.promoWrapper img{
+    width: 100%;
+}
+
+.promoName{
+    height: 25px;
+    width: 100%;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 4px;
+    padding-left: 20px;
+    color: #4673ab;
+}
+
+.promoDescription {
+    font-size: 14px;
+    padding: 10px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.timerBlock{
+    height: 50px;
+    width: 100%;
+    background-color: #dbdee6;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6px 10px;
+}
+
+.timerDigits {
+    display: flex;
+}
+
+.timerLabel {
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+.timerDigit {
+    color: #dbdee6;
+    background-color: #262626;
+}
+
+.timerDigits > p {
+    height: 25px;
+    padding: 2px;
+    font-size: 20px;
+    line-height: 21px;
+    text-align: center;
+    margin-right: 3px;
+}
+
+.promoWrapper > a {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
 .buying{
     padding-bottom: 30px;
 }
@@ -1109,6 +1214,14 @@ body{
         width: 980px;
     }
 
+    .line-with-text__r{
+        display: none;
+    }
+
+    .buttons{
+        visibility: visible;
+    }
+
     .news-and-slider__right__slider{
         background-image: url("images/slider_980px.jpg");
     }
@@ -1126,6 +1239,10 @@ body{
     .news-and-slider__right__cool-text{
         font-size: 13px;
         padding: 18px;
+    }
+
+    .timerBlock > p{
+        display: none;
     }
 
     .footer__wrapper{
@@ -1146,7 +1263,7 @@ body{
     .cloud, .key-brands__wrapper div:nth-last-child(-n+4),
     .we-in-numbers__items .we-in-numbers__items__wrap:nth-last-child(-n+2),
     .buying__items div:nth-last-child(-n+1), .products-list__items__wrap:nth-last-child(-n+1),
-    .callback{
+    .callback, .promoWrapper:nth-last-child(-n+1){
         display: none;
     }
 
@@ -1184,8 +1301,12 @@ body{
     .header__main-part__cart, .info, .we-in-numbers, .strengths, .five-reasons,
     .news-and-slider, .buying, .key-brands, .slogan, .line-with-text__r,
     .products-list__items__wrap:nth-last-child(-n+3), .lower-footer p,
-    .footer__wrapper__address, .footer__wrapper__services{
+    .footer__wrapper__address, .footer__wrapper__services, .promoWrapper:nth-last-child(-n+3){
         display: none;
+    }
+
+    .promoWrapper{
+        width: 320px;
     }
 
     .products-list__items__wrap{
