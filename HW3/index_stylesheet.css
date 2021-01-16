@@ -558,8 +558,8 @@ body{
 
 /*Оранжевая менюха*/
 .products{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    display: flex;
+    flex-direction: row;
     margin-top: 30px;
     padding: 0 10px;
     background: #c44411;
@@ -570,6 +570,7 @@ body{
 }
 
 .products__category{
+    width: 100%;
     background: #ff5600;
     padding: 10px;
     border-bottom: #c44411 3px solid;
