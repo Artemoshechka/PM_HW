@@ -1,3 +1,18 @@
+var months = {
+    '01': 'января',
+    '02': 'февраля',
+    '03': 'марта',
+    '04': 'апреля',
+    '05': 'мая',
+    '06': 'июня',
+    '07': 'июля',
+    '08': 'августа',
+    '09': 'сентября',
+    '10': 'октября',
+    '11': 'ноября',
+    '12': 'декабря',
+}
+
 //Смена валюты
 for (char of ITEMS){
     if (CURRENCY !== char.currency){
@@ -13,6 +28,9 @@ let NEW = [],
     SALE = [];
 
 for (char of ITEMS){
+    if (char.hasOwnProperty('img') === false){
+        char.img = 'images/no_photo.jpg'
+    }
     if (char.type === 'new'){
         NEW.push(char);
     }
@@ -21,6 +39,18 @@ for (char of ITEMS){
     }
     if (char.type === 'sale'){
         SALE.push(char);
+    }
+}
+
+for (char of PROMOTIONS){
+    if (char.hasOwnProperty('img') === false){
+        char.img = 'images/no_photo.jpg'
+    }
+}
+
+for (char of BUYING_RIGHT_NOW){
+    if (char.hasOwnProperty('img') === false){
+        char.img = 'images/no_photo.jpg'
     }
 }
 
@@ -37,19 +67,30 @@ RECOMMENDED.sort(function (a, b){
     return a.price-b.price
 })
 
-
 SALE.sort(function (a, b){
     return b.price_diff-a.price_diff
 })
 
+MENU.sort(function (a,b){
+    return a.order-b.order
+})
+
 //Добавление суммы в корзину
+
 let items = document.querySelector("#items"),
     value = document.querySelector("#value"),
     currency = document.querySelector("#currency")
 
-items.appendChild(document.createTextNode(BASKET.elements));
-value.appendChild(document.createTextNode(BASKET.price));
-currency.appendChild(document.createTextNode(CURRENCY));
+if (BASKET.length === 0){
+    items.appendChild(document.createTextNode('0'));
+    value.appendChild(document.createTextNode('0'));
+    currency.appendChild(document.createTextNode(CURRENCY));
+}
+else{
+    items.appendChild(document.createTextNode(BASKET.elements));
+    value.appendChild(document.createTextNode(BASKET.price));
+    currency.appendChild(document.createTextNode(CURRENCY));
+}
 
 //Добавление айтемов в оранжевое меню
 if (MENU.length === 0){
@@ -68,6 +109,32 @@ else{
         product_type.appendChild(link);
         products.appendChild(product_type);
     }
+}
+//Добавление новостей
+if (NEWS.length === 0){
+    let section = document.querySelector('.news-and-slider');
+    let new_items = document.querySelector('.news-section');
+    section.style.display = "block";
+    new_items.remove();
+}
+else if(NEWS.length <= 3){
+    let new_items = document.querySelector('.news-list'),
+        new_string = ''
+    for (char of NEWS){
+        let item_string = `<li class="news-preview">
+                    <a href="#"><img class="news-img" src=${char.img} alt="news icon">
+                        <div class="news-date">
+                            <p class="date-num">${char.date.substring(9, 10)}</p>
+                            <p>${months[char.date.substring(5, 7)]}</p>
+                        </div></a>
+                    <div class="news-text">
+                        <a href="#" class="news-title">${char.title}</a>
+                        <p class="news-article">${char.description}</p>
+                    </div>
+                </li>`
+        new_string += item_string
+    }
+    new_items.innerHTML = new_string;
 }
 
 //Добавление айтемов в поля "Новинки" "Рекомендуем" "Распродажа"
@@ -171,5 +238,3 @@ else{
     }
     new_items.innerHTML = new_string;
 }
-
-
