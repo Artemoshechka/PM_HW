@@ -43,8 +43,10 @@ SALE.sort(function (a, b){
 })
 /*Конец сортировки*/
 
-let cart_items_value = document.querySelector("#cart-items-value"),
-    content = document.createTextNode(String(BASKET.elements)+'/'+String(BASKET.price) + ' ' + CURRENCY);
+let items = document.querySelector("#items"),
+    value = document.querySelector("#value"),
+    currency = document.querySelector("#currency")
 
-cart_items_value.appendChild(content)
-console.log(cart_items_value);
+items.appendChild(document.createTextNode(BASKET.elements));
+value.appendChild(document.createTextNode(BASKET.price));
+currency.appendChild(document.createTextNode(CURRENCY));
