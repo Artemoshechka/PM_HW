@@ -41,7 +41,6 @@ RECOMMENDED.sort(function (a, b){
 SALE.sort(function (a, b){
     return b.price_diff-a.price_diff
 })
-//Конец сортировки
 
 //Добавление суммы в корзину
 let items = document.querySelector("#items"),
@@ -53,25 +52,36 @@ value.appendChild(document.createTextNode(BASKET.price));
 currency.appendChild(document.createTextNode(CURRENCY));
 
 //Добавление айтемов в оранжевое меню
-let products = document.querySelector('.products');
-for (char of MENU){
-    let title = document.createTextNode(char.title);
-    let link = document.createElement('a');
-    let product_type = document.createElement('div');
-    product_type.setAttribute('class', 'products__category');
-    link.setAttribute('href',char.url);
-    link.appendChild(title);
-    product_type.appendChild(link);
-    products.appendChild(product_type);
+if (MENU.length === 0){
+    let products = document.querySelector('.products');
+    products.remove();
+    }
+else{
+    let products = document.querySelector('.products');
+    for (char of MENU){
+        let title = document.createTextNode(char.title);
+        let link = document.createElement('a');
+        let product_type = document.createElement('div');
+        product_type.setAttribute('class', 'products__category');
+        link.setAttribute('href',char.url);
+        link.appendChild(title);
+        product_type.appendChild(link);
+        products.appendChild(product_type);
+    }
 }
 
 //Добавление айтемов в поля "Новинки" "Рекомендуем" "Распродажа"
-let new_items = document.querySelector('.products-list-new__items'),
-    new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
+if (NEW.length === 0){
+    let new_items = document.querySelector('.products-list-new')
+    new_items.remove();
+}
+else{
+    let new_items = document.querySelector('.products-list-new__items'),
+        new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
             <img src="images/next_button.png" alt="next button" class="next-button">`;
 
-for (char of NEW){
-    let item_string = `<div class="products-list__items__wrap">
+    for (char of NEW){
+        let item_string = `<div class="products-list__items__wrap">
                 <img src="images/products_new.jpg" alt="new label" class="product-label">
                 <div class="products-list__items__wrap__image"><a href="#"><img src=${char.img} alt="some item"></a></div>
                 <p><a href=${char.url}>${char.description}</a></p>
@@ -84,16 +94,22 @@ for (char of NEW){
                     <a href=${char.url} class="more">Подробнее</a>
                 </p>
             </div>`
-    new_string += item_string;
+        new_string += item_string;
+    }
+    new_items.innerHTML = new_string;
 }
-new_items.innerHTML = new_string;
 
-new_items = document.querySelector('.products-list-recommended__items');
-new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
+if (RECOMMENDED.length === 0){
+    let new_items = document.querySelector('.products-list-recommended')
+    new_items.remove();
+}
+else{
+    new_items = document.querySelector('.products-list-recommended__items');
+    new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
             <img src="images/next_button.png" alt="next button" class="next-button">`;
 
-for (char of RECOMMENDED){
-    let item_string = `<div class="products-list__items__wrap">
+    for (char of RECOMMENDED){
+        let item_string = `<div class="products-list__items__wrap">
                 <img src="images/products_recommended.jpg" alt="new label" class="product-label">
                 <div class="products-list__items__wrap__image"><a href="#"><img src=${char.img} alt="some item"></a></div>
                 <p><a href=${char.url}>${char.description}</a></p>
@@ -106,15 +122,21 @@ for (char of RECOMMENDED){
                     <a href=${char.url} class="more">Подробнее</a>
                 </p>
             </div>`
-    new_string += item_string;
+        new_string += item_string;
+    }
+    new_items.innerHTML = new_string;
 }
-new_items.innerHTML = new_string;
 
-new_items = document.querySelector('.products-list-sale__items');
-new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
+if (SALE.length === 0){
+    let new_items = document.querySelector('.products-list-sale')
+    new_items.remove();
+}
+else{
+    new_items = document.querySelector('.products-list-sale__items');
+    new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
             <img src="images/next_button.png" alt="next button" class="next-button">`;
-for (char of SALE){
-    let item_string = `<div class="products-list__items__wrap">
+    for (char of SALE){
+        let item_string = `<div class="products-list__items__wrap">
                 <img src="images/products_sale.jpg" alt="new label" class="product-label">
                 <div class="products-list__items__wrap__image"><a href="#"><img src=${char.img} alt="some item"></a></div>
                 <p><a href=${char.url}>${char.description}</a></p>
@@ -127,20 +149,27 @@ for (char of SALE){
                     <a href=${char.url} class="more">Подробнее</a>
                 </p>
             </div>`
-    new_string += item_string;
+        new_string += item_string;
+    }
+    new_items.innerHTML = new_string;
 }
-new_items.innerHTML = new_string;
 
 //Добавление айтемов "Что покупают сейчас"
-
-new_items = document.querySelector('.buying__items');
-new_string = '';
-for (char of BUYING_RIGHT_NOW){
-    let item_string = `<div class="buying__items__wrap">
+if (BUYING_RIGHT_NOW.length === 0){
+    let new_items = document.querySelector('.buying')
+    new_items.remove();
+}
+else{
+    new_items = document.querySelector('.buying__items');
+    new_string = '';
+    for (char of BUYING_RIGHT_NOW){
+        let item_string = `<div class="buying__items__wrap">
                 <div class="buying__items__wrap__image"><a href=${char.url}><img src=${char.img} alt="some item"></a></div>
                 <p><a href=${char.url}>${char.title}</a></p>
             </div>`
-    new_string += item_string;
+        new_string += item_string;
+    }
+    new_items.innerHTML = new_string;
 }
-new_items.innerHTML = new_string;
+
 

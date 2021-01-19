@@ -573,6 +573,7 @@ body{
     padding: 10px;
     border-left: 1px solid #ff743d;
     border-bottom: #c44411 3px solid;
+    text-align: center;
 }
 
 .products__category:first-child{
