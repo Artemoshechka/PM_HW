@@ -783,6 +783,12 @@ body{
     padding: 6px 10px;
 }
 
+.infinite{
+    color: #337500;
+    text-align: center;
+    font-weight: bold;
+}
+
 .timerDigits {
     display: flex;
 }

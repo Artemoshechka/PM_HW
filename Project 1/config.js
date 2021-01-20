@@ -148,7 +148,6 @@ const PROMOTIONS = [
     {
         title: 'Название акции',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
         url: 'https://same_url/item.html',
         time_action: '1d 2h 20m'
     },

@@ -49,7 +49,7 @@ for (char of ITEMS){
 
 for (char of PROMOTIONS){
     if (char.hasOwnProperty('img') === false){
-        char.img = 'images/no_photo.jpg'
+        char.img = 'images/promo_plug.jpg'
     }
 }
 
@@ -331,5 +331,71 @@ else{
     new_items.innerHTML = new_string;
 }
 
-console.log(RECOMMENDED);
+//Добавление акций
+if (PROMOTIONS.length === 0){
+    let new_items = document.querySelector('.promos');
+    new_items.remove();
+}
+else{
+    let new_items = document.querySelector('.promosWrapper'),
+        new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
+            <img src="images/next_button.png" alt="next button" class="next-button">`;
+    for (char of PROMOTIONS){
+        if (char.hasOwnProperty('time_action') === false){
+            let item_string = `<div class="promoWrapper">
+                <a class="promoName" href=${char.url}>${char.title}</a>
+                <img src=${char.img} alt="promo pic">
+                <p class="promoDescription">
+                    ${char.description}
+                </p>
+                <div class="timerBlock">
+                    <p class="infinite">БЕССРОЧНО</p>
+                </div>
+                <a href="#">Подробнее</a>
+            </div>`
+            new_string += item_string;
+        }
+        else{
+        let reg_numbers = /\d{1,2}/gmi,
+            numbers = char.time_action.match(reg_numbers),
+            new_numbers = '';
+            for (digit of numbers){
+                if(digit.length === 1){
+                    digit = '0' + digit;
+                }
+                new_numbers += digit
+            }
+            let item_string = `<div class="promoWrapper">
+                <a class="promoName" href=${char.url}>Название акции</a>
+                <img src=${char.img} alt="promo pic">
+                <p class="promoDescription">${char.description}</p>
+                <div class="timerBlock">
+                    <p>Срок действия:</p>
+                    <div class="timer">
+                        <div class="timerDigits">
+                            <p class="timerDigit">${new_numbers[0]}</p>
+                            <p class="timerDigit">${new_numbers[1]}</p>
+                            <p>:</p>
+                            <p class="timerDigit">${new_numbers[2]}</p>
+                            <p class="timerDigit">${new_numbers[3]}</p>
+                            <p>:</p>
+                            <p class="timerDigit">${new_numbers[4]}</p>
+                            <p class="timerDigit">${new_numbers[5]}</p>
+                        </div>
+                        <div class="timerLabel">
+                            <p>дней</p>
+                            <p>часов</p>
+                            <p>минут</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">Подробнее</a>
+            </div>`
+            new_string += item_string;
+        }
+    }
+    new_items.innerHTML = new_string;
+}
+
 //Делаем кнопку купить рабочей
+
