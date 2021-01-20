@@ -90,6 +90,15 @@ else{
     value.appendChild(document.createTextNode(BASKET.price));
     currency.appendChild(document.createTextNode(CURRENCY));
 }
+/*
+//Добавление айтемов в верхнее меню
+if (TOP_MENU.length === 0){
+    let menu = document.querySelector('.menu__wrapper')
+    menu.remove()
+}
+else {
+    let ul = document.querySelector('#menu')
+}*/
 
 //Добавление айтемов в оранжевое меню
 if (MENU.length === 0){

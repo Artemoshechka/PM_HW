@@ -117,9 +117,13 @@ body{
     z-index: 1;
 }
 
-#menu li{
-    display: flex;
+#menu{
     justify-content: center;
+    display: flex;
+}
+
+#menu li{
+    position: relative;
 }
 
 #menu li a {
@@ -127,12 +131,6 @@ body{
     color: #bdc3c5;
     text-decoration: none;
     cursor: pointer;
-}
-
-.withArrow::after{
-    content: "▾";
-    margin-left: 5px;
-    color: #ff5816;
 }
 
 #menu button{
@@ -177,6 +175,28 @@ body{
 #menu:target > button {
     right: 20px;
     transition: right 300ms linear;
+}
+
+.submenu{
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    z-index: 10;
+    background: #040d0d;
+}
+
+.submenu li{
+    text-align: center;
+    margin: 10px 0;
+    list-style: none;
+}
+
+#menu li:hover .submenu{
+    display: block;
 }
 
 /*Хедэр*/
