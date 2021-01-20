@@ -1,4 +1,4 @@
-var months = {
+const months = {
     '01': 'января',
     '02': 'февраля',
     '03': 'марта',
@@ -74,7 +74,6 @@ SALE.sort(function (a, b){
 MENU.sort(function (a,b){
     return a.order-b.order
 })
-
 //Добавление суммы в корзину
 
 let items = document.querySelector("#items"),
@@ -119,7 +118,9 @@ if (NEWS.length === 0){
 }
 else if(NEWS.length <= 3){
     let new_items = document.querySelector('.news-list'),
-        new_string = ''
+        all_news = document.querySelector('.all-news-link'),
+        new_string = '';
+    all_news.remove();
     for (char of NEWS){
         let item_string = `<li class="news-preview">
                     <a href="#"><img class="news-img" src=${char.img} alt="news icon">
@@ -135,6 +136,32 @@ else if(NEWS.length <= 3){
         new_string += item_string
     }
     new_items.innerHTML = new_string;
+}
+else{
+    let list = [],
+        new_items = document.querySelector('.news-list'),
+        new_string = '';
+    for (let i = 0; i < 3; i++){
+        let ind = Math.floor(Math.random() * NEWS.length);
+        list.push(NEWS[ind]);
+        NEWS.splice(ind, 1);
+    }
+    for (char of list){
+        let item_string = `<li class="news-preview">
+                    <a href="#"><img class="news-img" src=${char.img} alt="news icon">
+                        <div class="news-date">
+                            <p class="date-num">${char.date.substring(9, 10)}</p>
+                            <p>${months[char.date.substring(5, 7)]}</p>
+                        </div></a>
+                    <div class="news-text">
+                        <a href="#" class="news-title">${char.title}</a>
+                        <p class="news-article">${char.description}</p>
+                    </div>
+                </li>`
+        new_string += item_string
+    }
+    new_items.innerHTML = new_string;
+    console.log(list);
 }
 
 //Добавление айтемов в поля "Новинки" "Рекомендуем" "Распродажа"
