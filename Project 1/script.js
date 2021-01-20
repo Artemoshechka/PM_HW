@@ -397,4 +397,5 @@ else{
 
 //Делаем кнопку купить рабочей
 
-
+let test = document.querySelector('.buy-button').parentNode.parentNode.childNodes;
+console.log(test[7])

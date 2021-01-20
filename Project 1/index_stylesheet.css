@@ -126,8 +126,8 @@ body{
     position: relative;
 }
 
-#menu li a {
-    font-size: 14px;
+#menu li a{
+    font-size: 16px;
     color: #bdc3c5;
     text-decoration: none;
     cursor: pointer;
@@ -147,27 +147,22 @@ body{
     text-decoration: none;
 }
 
-.topMenu > a {
+.topMenu > a{
     display: flex;
     align-items: center;
     background-color: transparent;
-    color: #bdc3c5;
     border: none;
     height: 15px;
     text-decoration: none;
 }
 
-.topMenu > a:active {
-    color: #ff5600;
-}
-
-.topMenu > a > span {
+.topMenu > a > span{
     line-height: 20px;
     font-size: 13px;
     margin-left: 8px;
 }
 
-#menu:target {
+#menu:target{
     left: 0;
     transition: left 300ms linear;
 }
@@ -184,7 +179,7 @@ body{
     display: none;
     top: 100%;
     left: 0;
-    width: 150px;
+    width: 200px;
     z-index: 10;
     background: #040d0d;
 }
@@ -193,6 +188,10 @@ body{
     text-align: center;
     margin: 10px 0;
     list-style: none;
+}
+
+#menu a:hover{
+    color: #ff5600;
 }
 
 #menu li:hover .submenu{
