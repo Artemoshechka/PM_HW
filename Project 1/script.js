@@ -13,9 +13,6 @@ const months = {
     '12': 'декабря',
 }
 
-//Смена валюты
-
-
 //Сортировка айтемов
 let NEW = [],
     RECOMMENDED = [],
@@ -39,6 +36,7 @@ for (char of ITEMS){
     }
 }
 
+//Смена валюты
 for (char of ITEMS){
     if (CURRENCY !== char.currency){
         char.price = String(Math.floor(Number(char.price) * CURRENCY_EXCHANGE[char.currency]));
@@ -398,4 +396,5 @@ else{
 }
 
 //Делаем кнопку купить рабочей
+
 

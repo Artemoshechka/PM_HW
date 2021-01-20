@@ -789,6 +789,10 @@ body{
     font-weight: bold;
 }
 
+.promoWrapper .infinite{
+    display: inline-block;
+}
+
 .timerDigits {
     display: flex;
 }
