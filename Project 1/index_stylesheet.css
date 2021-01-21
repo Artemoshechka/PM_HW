@@ -633,6 +633,7 @@ body{
 .products-list-new__items .next-button,
 .products-list-sale__items .next-button{
     right: 0;
+    z-index: 10;
 }
 
 .products-list__items__wrap{
@@ -1331,7 +1332,7 @@ body{
 
     .cloud, .key-brands__wrapper div:nth-last-child(-n+4),
     .we-in-numbers__items .we-in-numbers__items__wrap:nth-last-child(-n+2),
-    .buying__items div:nth-last-child(-n+1), .callback{
+    .callback{
         display: none;
     }
 

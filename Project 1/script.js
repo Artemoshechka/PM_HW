@@ -1,3 +1,7 @@
+let device_width = function (){
+    return document.documentElement.clientWidth
+}
+
 const months = {
     '01': 'января',
     '02': 'февраля',
@@ -20,18 +24,27 @@ let NEW = [],
 
 for (char of ITEMS){
     if (char.hasOwnProperty('img') === false){
-        char.img = 'images/no_photo.jpg'
+        char.img = 'images/no_photo.jpg';
     }
     if (char.type === 'new'){
         NEW.push(char);
     }
     if (char.type === 'recommended'){
         if (char.hasOwnProperty('price') === false){
-           char.price = '0'
+            char.price = '0';
+        }
+        if (char.hasOwnProperty('oldPrice') === false){
+            char.oldPrice = '0';
         }
         RECOMMENDED.push(char);
     }
     if (char.type === 'sale'){
+        if (char.hasOwnProperty('price') === false){
+            char.price = 0;
+        }
+        if (char.hasOwnProperty('oldPrice') === false){
+            char.oldPrice = 0;
+        }
         SALE.push(char);
     }
 }
@@ -296,7 +309,8 @@ else{
     new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
             <img src="images/next_button.png" alt="next button" class="next-button">`;
     for (char of SALE){
-        let item_string = `<div class="products-list__items__wrap">
+        if (char.price !== '0'){
+            let item_string = `<div class="products-list__items__wrap">
                 <img src="images/products_sale.jpg" alt="new label" class="product-label">
                 <div class="products-list__items__wrap__image"><a href="#"><img src=${char.img} alt="some item"></a></div>
                 <p><a href=${char.url}>${char.description}</a></p>
@@ -309,7 +323,20 @@ else{
                     <a href=${char.url} class="more">Подробнее</a>
                 </p>
             </div>`
-        new_string += item_string;
+            new_string += item_string;
+        }
+        else{
+            let item_string = `<div class="products-list__items__wrap">
+                    <img src="images/products_sale.jpg" alt="sale label" class="product-label">
+                    <div class="products-list__items__wrap__image"><a href="#"><img src=${char.img} alt="some item"></a></div>
+                    <p><a href=${char.url}>${char.description}</a></p>
+                    <p class="price"><span class="big-numbers"><b>Товар временно не доступен</b></span><span class="old-price"></span></p>
+                    <p>
+                        <a href=${char.url} class="more">Подробнее</a>
+                    </p>
+                </div>`
+            new_string += item_string;
+        }
     }
     new_items.innerHTML = new_string;
 }
@@ -404,7 +431,7 @@ else{
 let buttons = document.querySelectorAll('.buy-button');
 for (char of buttons){
     let curr = char;
-    char.addEventListener('click', event=>{
+    char.addEventListener('click', function (){
         let sum = document.querySelector('#value'),
             amount = document.querySelector('#items'),
             curr_sum_value = document.querySelector('#value').getAttribute('data-value'),
@@ -419,4 +446,3 @@ for (char of buttons){
     })
 }
 
-console.log(document.querySelector('.right').parentNode.parentNode.parentNode.querySelectorAll('.products-list__items__wrap'))
