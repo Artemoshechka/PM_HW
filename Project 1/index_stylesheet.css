@@ -160,6 +160,7 @@ body{
     line-height: 20px;
     font-size: 13px;
     margin-left: 8px;
+    color: #ffffff;
 }
 
 #menu:target{
@@ -636,7 +637,7 @@ body{
 
 .products-list__items__wrap{
     position: relative;
-    width: 233px;
+    width: 240px;
     border: 1px solid #dbdee6;
     border-radius: 10px;
     padding: 20px 15px;
@@ -707,6 +708,10 @@ body{
     border-color: #365884;
 }
 
+.buy-button:focus{
+    outline: none;
+}
+
 .buy-button svg{
     height: 22px;
     width: 26px;
@@ -752,6 +757,7 @@ body{
 
 .promoWrapper img{
     width: 100%;
+    height: 99px;
 }
 
 .promoName{
@@ -767,7 +773,7 @@ body{
 .promoDescription {
     font-size: 14px;
     padding: 10px;
-    height: 100px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -805,6 +811,7 @@ body{
 .timerDigit {
     color: #dbdee6;
     background-color: #262626;
+    border-radius: 2px;
 }
 
 .timerDigits > p {
@@ -1218,7 +1225,7 @@ body{
 }
 
 .service__mobile li{
-    padding: 10px 0;
+    padding: 10px;
     background: #5c7489;
     font-size: 13px;
     border-bottom: 1px solid #dbdee6;
@@ -1324,8 +1331,7 @@ body{
 
     .cloud, .key-brands__wrapper div:nth-last-child(-n+4),
     .we-in-numbers__items .we-in-numbers__items__wrap:nth-last-child(-n+2),
-    .buying__items div:nth-last-child(-n+1), .products-list__items__wrap:nth-last-child(-n+1),
-    .callback, .promoWrapper:nth-last-child(-n+1){
+    .buying__items div:nth-last-child(-n+1), .callback{
         display: none;
     }
 
@@ -1361,18 +1367,9 @@ body{
 
     .work-hours, .header__main-part__contacts a, .header__main-part__search-icon,
     .header__main-part__cart, .info, .we-in-numbers, .strengths, .five-reasons,
-    .news-and-slider, .buying, .key-brands, .slogan, .line-with-text__r,
-    .products-list__items__wrap:nth-last-child(-n+3), .lower-footer p,
-    .footer__wrapper__address, .footer__wrapper__services, .promoWrapper:nth-last-child(-n+3){
+    .news-and-slider, .buying, .key-brands, .slogan, .line-with-text__r, .lower-footer p,
+    .footer__wrapper__address, .footer__wrapper__services{
         display: none;
-    }
-
-    .promoWrapper{
-        width: 320px;
-    }
-
-    .products-list__items__wrap{
-        width: 320px;
     }
 
     .line-with-text{

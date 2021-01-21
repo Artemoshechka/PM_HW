@@ -349,7 +349,9 @@ else{
                 <p class="promoDescription">
                     ${char.description}
                 </p>
+                
                 <div class="timerBlock">
+                    <p>Срок действия:</p>
                     <p class="infinite">БЕССРОЧНО</p>
                 </div>
                 <a href="#">Подробнее</a>
@@ -400,7 +402,6 @@ else{
 
 //Делаем кнопку купить рабочей
 let buttons = document.querySelectorAll('.buy-button');
-console.log(buttons);
 for (char of buttons){
     let curr = char;
     char.addEventListener('click', event=>{
@@ -417,3 +418,5 @@ for (char of buttons){
         amount.innerHTML = curr_amount_value;
     })
 }
+
+console.log(document.querySelector('.right').parentNode.parentNode.parentNode.querySelectorAll('.products-list__items__wrap'))
