@@ -226,8 +226,7 @@ if (NEW.length === 0){
 }
 else{
     let new_items = document.querySelector('.products-list-new__items'),
-        new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
-            <img src="images/next_button.png" alt="next button" class="next-button">`;
+        new_string = ``;
     for (char of NEW){
         if (char.hasOwnProperty('price') === true){
             let item_string = `<div class="products-list__items__wrap">
@@ -266,8 +265,7 @@ if (RECOMMENDED.length === 0){
 }
 else{
     new_items = document.querySelector('.products-list-recommended__items');
-    new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
-            <img src="images/next_button.png" alt="next button" class="next-button">`;
+    new_string = `  `;
     for (char of RECOMMENDED){
         if (char.price !== '0'){
             let item_string = `<div class="products-list__items__wrap">
@@ -306,8 +304,7 @@ if (SALE.length === 0){
 }
 else{
     new_items = document.querySelector('.products-list-sale__items');
-    new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
-            <img src="images/next_button.png" alt="next button" class="next-button">`;
+    new_string = ``;
     for (char of SALE){
         if (char.price !== '0'){
             let item_string = `<div class="products-list__items__wrap">
@@ -366,8 +363,7 @@ if (PROMOTIONS.length === 0){
 }
 else{
     let new_items = document.querySelector('.promosWrapper'),
-        new_string = `<img src="images/previous_button.png" alt="previous button" class="previous-button">
-            <img src="images/next_button.png" alt="next button" class="next-button">`;
+        new_string = ``;
     for (char of PROMOTIONS){
         if (char.hasOwnProperty('time_action') === false){
             let item_string = `<div class="promoWrapper">
@@ -445,4 +441,3 @@ for (char of buttons){
         amount.innerHTML = curr_amount_value;
     })
 }
-
