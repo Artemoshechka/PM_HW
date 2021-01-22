@@ -67,7 +67,47 @@ const MENU = [
         url: 'gsm_equipment.html',
     },
     {
-        order: 4,
+        order: 5,
+        title: 'VIDEO оборудование',
+        url: 'video_equipment.html',
+    },
+    {
+        order: 6,
+        title: 'VIDEO оборудование',
+        url: 'video_equipment.html',
+    },
+    {
+        order: 7,
+        title: 'VIDEO оборудование',
+        url: 'video_equipment.html',
+    },
+    {
+        order: 8,
+        title: 'VIDEO оборудование',
+        url: 'video_equipment.html',
+    },
+    {
+        order: 9,
+        title: 'VIDEO оборудование',
+        url: 'video_equipment.html',
+    },
+    {
+        order: 10,
+        title: 'VIDEO оборудование',
+        url: 'video_equipment.html',
+    },
+    {
+        order: 11,
+        title: 'VIDEO оборудование',
+        url: 'video_equipment.html',
+    },
+    {
+        order: 12,
+        title: 'VIDEO оборудование',
+        url: 'video_equipment.html',
+    },
+    {
+        order: 13,
         title: 'VIDEO оборудование',
         url: 'video_equipment.html',
     }

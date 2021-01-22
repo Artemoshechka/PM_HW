@@ -6,12 +6,6 @@ $(document).ready(function(){
         slidesToShow:4,
         responsive:[
             {
-                breakpoint: 1140,
-                settings: {
-                    slidesToShow:4
-                }
-            },
-            {
                 breakpoint: 980,
                 settings: {
                     slidesToShow:3
@@ -32,12 +26,6 @@ $(document).ready(function(){
         speed:500,
         slidesToShow:4,
         responsive:[
-            {
-                breakpoint: 1140,
-                settings: {
-                    slidesToShow:4
-                }
-            },
             {
                 breakpoint: 980,
                 settings: {
@@ -60,12 +48,6 @@ $(document).ready(function(){
         slidesToShow:4,
         responsive:[
             {
-                breakpoint: 1140,
-                settings: {
-                    slidesToShow:4
-                }
-            },
-            {
                 breakpoint: 980,
                 settings: {
                     slidesToShow:3
@@ -86,12 +68,6 @@ $(document).ready(function(){
         speed:500,
         slidesToShow:4,
         responsive:[
-            {
-                breakpoint: 1140,
-                settings: {
-                    slidesToShow:4
-                }
-            },
             {
                 breakpoint: 980,
                 settings: {
@@ -127,5 +103,31 @@ $(document).ready(function(){
             },
         ]
     });
+
+    $('.we-in-numbers__items').slick({
+        arrows:true,
+        infinite:false,
+        speed:500,
+        slidesToShow:6,
+        responsive:[
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow:4
+                }
+            },
+        ]
+    });
+
+    let items_number = MENU.length
+    if (items_number > 10){
+        $('.products').slick({
+            arrows:true,
+            infinite:false,
+            speed:500,
+            slidesToShow:10,
+        });
+    }
+
 });
 
