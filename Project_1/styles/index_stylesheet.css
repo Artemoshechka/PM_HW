@@ -209,7 +209,7 @@ body{
 
 .my_bg{
     color: #ff5600;
-    background-image: url("/images/cool_bg.jpg");
+    background-image: url("../images/cool_bg.jpg");
     border-radius: 10px;
     margin: 0 3px;
 }
@@ -321,7 +321,7 @@ body{
 .header__main-part__cart__cart{
     padding: 12px 15px;
     text-align: left;
-    background-image: url("/images/cool_bg.jpg");
+    background-image: url("../images/cool_bg.jpg");
     border-radius: 5px;
 }
 
