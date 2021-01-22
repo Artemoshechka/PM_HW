@@ -165,6 +165,7 @@
     font-size: 0;
     border: 2px solid #dbdee6;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .we-in-numbers__items .slick-arrow.slick-prev{
