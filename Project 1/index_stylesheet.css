@@ -468,30 +468,12 @@ body{
     gap: 10px;
 }
 
-.news-and-slider__right__slider{
+.slide{
     position: relative;
-    background-image: url(images/slider.jpg);
-    background-position: center center;
-    background-size: cover;
-    border-radius: 10px;
-    width: 100%;
     height: 400px;
-}
-
-.previous-button{
-    position: absolute;
-    top: 163px;
-    left: 18px;
-    cursor: pointer;
-}
-
-.next-button{
-    position: absolute;
-    width: 16px;
-    height: 44px;
-    top: 163px;
-    right: 18px;
-    cursor: pointer;
+    border-radius: 10px;
+    background: center center no-repeat;
+    background-size: 100% 100%;
 }
 
 .news-and-slider__right__slider__more{
@@ -511,25 +493,6 @@ body{
 .news-and-slider__right__slider__more:hover{
     background: #e3e5eb;
     cursor: pointer;
-}
-
-.slider_dots{
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-}
-
-.slider_dots li{
-    display: inline-block;
-    margin: 0 5px;
-    width: 15px;
-    height: 15px;
-    background: #ffffff;
-    border-radius: 3px;
-}
-
-.slider_dots .active{
-    background: #ff5600;
 }
 
 .news-and-slider__right__cool-text{
@@ -700,14 +663,6 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0 20px;
-}
-
-.promosWrapper .previous-button{
-    left: 0;
-}
-
-.promosWrapper .next-button{
-    right: 0;
 }
 
 .promoWrapper{
@@ -1256,19 +1211,7 @@ body{
         display: none;
     }
 
-    .news-and-slider__right__slider{
-        background-image: url("images/slider_980px.jpg");
-    }
-
-    .products,
-    .header__main-part__search,
-    .products-list-recommended__items .previous-button,
-    .products-list-new__items .previous-button,
-    .products-list-sale__items .previous-button,
-    .products-list-recommended__items .next-button,
-    .products-list-new__items .next-button,
-    .products-list-sale__items .next-button,
-    .promosWrapper .previous-button, .promosWrapper .next-button{
+    .products, .header__main-part__search{
         display: none;
     }
 
@@ -1327,10 +1270,6 @@ body{
 
     .five-reasons__bad__head svg{
         margin-top: 13px;
-    }
-
-    .news-and-slider__right__slider{
-        background-image: url("images/slider_750px.jpg");
     }
 
     .footer__wrapper{

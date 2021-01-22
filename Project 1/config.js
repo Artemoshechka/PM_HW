@@ -140,11 +140,26 @@ const NEWS = [
 const BANNER = [
     {
         order: 1,
-        img: 'https://same_url.jpg',
+        img: 'images/slider.jpg',
         url: 'voip_equipment.html',
     },
     {
         order: 2,
+        img: 'https://same_url2.jpg',
+        url: 'voip_equipment.html',
+    },
+    {
+        order: 4,
+        img: 'https://same_url2.jpg',
+        url: 'voip_equipment.html',
+    },
+    {
+        order: 5,
+        img: 'https://same_url2.jpg',
+        url: 'voip_equipment.html',
+    },
+    {
+        order: 3,
         img: 'https://same_url2.jpg',
         url: 'voip_equipment.html',
     }

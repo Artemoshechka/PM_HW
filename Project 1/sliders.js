@@ -129,5 +129,12 @@ $(document).ready(function(){
         });
     }
 
+    $('.news-and-slider__right__slides').slick({
+        arrows:true,
+        infinite:true,
+        dots:true,
+        speed:500,
+        slidesToShow:1,
+    });
 });
 

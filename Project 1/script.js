@@ -72,6 +72,10 @@ for (char of BUYING_RIGHT_NOW){
 }
 
 //Сортировка
+BANNER.sort(function (a,b){
+    return a.order-b.order
+})
+
 for (char of SALE){
     char.price_diff = Number(char.oldPrice) - Number(char.price)
 }
@@ -92,6 +96,7 @@ SALE.sort(function (a, b){
 MENU.sort(function (a,b){
     return a.order-b.order
 })
+
 //Добавление суммы в корзину
 let items = document.querySelector("#items"),
     value = document.querySelector("#value"),
@@ -217,6 +222,26 @@ else{
     }
     new_items.innerHTML = new_string;
     console.log(list);
+}
+
+//Большой слайдер
+if (BANNER.length === 0){
+    let new_items = document.querySelector('.news-and-slider__right__slider')
+    new_items.remove();
+}else{
+    for (char of BANNER){
+        let slide = document.createElement('div'),
+            slides = document.querySelector('.news-and-slider__right__slides'),
+            button = document.createElement('button'),
+            b = document.createElement('b');
+        button.setAttribute('class', 'news-and-slider__right__slider__more')
+        b.appendChild(document.createTextNode('ПОДРОБНЕЕ'));
+        button.appendChild(b);
+        slide.setAttribute('class', 'slide');
+        slide.style.background = `url(${char.img})`;
+        slide.appendChild(button);
+        slides.appendChild(slide);
+    }
 }
 
 //Добавление айтемов в поля "Новинки" "Рекомендуем" "Распродажа"
