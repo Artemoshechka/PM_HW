@@ -22,13 +22,13 @@
 
 .news-and-slider__right__slides .slick-arrow.slick-prev{
     z-index: 10;
-    background: url("images/previous_button.png") center center no-repeat;
+    background: url("/images/previous_button.png") center center no-repeat;
     top: 40%;
     left: 0;
 }
 
 .news-and-slider__right__slides .slick-arrow.slick-next{
-    background: url("images/next_button.png") center center no-repeat;
+    background: url("/images/next_button.png") center center no-repeat;
     top: 40%;
     right: 0;
 }
@@ -81,13 +81,13 @@
 .products .slick-arrow.slick-prev{
     top: 13px;
     left: 0;
-    background: url("images/white_arrow_left.png") center center no-repeat;
+    background: url("/images/white_arrow_left.png") center center no-repeat;
 }
 
 .products .slick-arrow.slick-next{
     top: 13px;
     right: 0;
-    background: url("images/white_arrow.png") center center no-repeat;
+    background: url("/images/white_arrow.png") center center no-repeat;
 }
 
 .products-list-new__items .slick-track,
@@ -141,12 +141,12 @@
 }
 
 .key-brands__wrapper .slick-arrow.slick-prev{
-    background: url("images/small_button_left.png") center center no-repeat;
+    background: url("/images/small_button_left.png") center center no-repeat;
     right: 40px;
 }
 
 .key-brands__wrapper .slick-arrow.slick-next{
-    background: url("images/small_button_right.png") center center no-repeat;
+    background: url("/images/small_button_right.png") center center no-repeat;
     right: 0;
 }
 
@@ -168,12 +168,12 @@
 }
 
 .we-in-numbers__items .slick-arrow.slick-prev{
-    background: url("images/small_button_left.png") center center no-repeat;
+    background: url("/images/small_button_left.png") center center no-repeat;
     right: 40px;
 }
 
 .we-in-numbers__items .slick-arrow.slick-next{
-    background: url("images/small_button_right.png") center center no-repeat;
+    background: url("/images/small_button_right.png") center center no-repeat;
     right: 0;
 }
 
@@ -182,7 +182,7 @@
     .products-list-recommended__items .slick-arrow.slick-prev,
     .products-list-sale__items .slick-arrow.slick-prev,
     .promosWrapper .slick-arrow.slick-prev{
-        background: url("images/previous_button.png") left center no-repeat;
+        background: url("/images/previous_button.png") left center no-repeat;
         left: 0;
     }
 
@@ -190,7 +190,7 @@
     .products-list-recommended__items .slick-arrow.slick-next,
     .products-list-sale__items .slick-arrow.slick-next,
     .promosWrapper .slick-arrow.slick-next{
-        background: url("images/next_button.png") right center no-repeat;
+        background: url("/images/next_button.png") right center no-repeat;
         right: 0;
     }
 }
@@ -215,7 +215,7 @@
     .products-list-recommended__items .slick-arrow.slick-prev,
     .products-list-sale__items .slick-arrow.slick-prev,
     .promosWrapper .slick-arrow.slick-prev{
-        background: url("images/small_button_left.png") center center no-repeat;
+        background: url("/images/small_button_left.png") center center no-repeat;
         right: 40px;
     }
 
@@ -223,7 +223,7 @@
     .products-list-recommended__items .slick-arrow.slick-next,
     .products-list-sale__items .slick-arrow.slick-next,
     .promosWrapper .slick-arrow.slick-next{
-        background: url("images/small_button_right.png") center center no-repeat;
+        background: url("/images/small_button_right.png") center center no-repeat;
         right: 0;
     }
 }
