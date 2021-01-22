@@ -55,33 +55,6 @@ body{
 .line-with-text__r a:hover{
     color: #ff5600;
 }
-
-.buttons{
-    position: absolute;
-    right: 0;
-    top: 17px;
-    background: #ffffff;
-    padding-left: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    text-align: center;
-    visibility: hidden;
-}
-
-.buttons__small-button{
-    height: 30px;
-    width: 30px;
-    padding-top: 5px;
-    border: 2px solid #dbdee6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.buttons__small-button:hover{
-    border-color: #ff5600;
-}
-
 /*Конец*/
 
 .menu__wrapper{
@@ -637,19 +610,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     position: relative;
-}
-
-.products-list-recommended__items .previous-button,
-.products-list-new__items .previous-button,
-.products-list-sale__items .previous-button{
-    left: 0;
-}
-
-.products-list-recommended__items .next-button,
-.products-list-new__items .next-button,
-.products-list-sale__items .next-button{
-    right: 0;
-    z-index: 10;
+    padding: 0 20px;
 }
 
 .products-list__items__wrap{
@@ -752,6 +713,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 0 20px;
 }
 
 .promosWrapper .previous-button{
@@ -765,7 +727,7 @@ body{
 .promoWrapper{
     display: flex;
     height: 380px;
-    width: 228px;
+    width: 224px;
     flex-direction: column;
     align-items: center;
     border: 1px solid #bdc3c5;
@@ -1297,16 +1259,11 @@ body{
         display: none;
     }
 
-    .buttons{
-        visibility: visible;
-    }
-
     .news-and-slider__right__slider{
         background-image: url("images/slider_980px.jpg");
     }
 
     .products,
-    .key-brands__wrapper div:nth-last-child(-n+2),
     .header__main-part__search,
     .products-list-recommended__items .previous-button,
     .products-list-new__items .previous-button,
@@ -1346,7 +1303,7 @@ body{
         padding: 18px 2px;
     }
 
-    .cloud, .key-brands__wrapper div:nth-last-child(-n+4),
+    .cloud,
     .we-in-numbers__items .we-in-numbers__items__wrap:nth-last-child(-n+2),
     .callback{
         display: none;
@@ -1452,6 +1409,10 @@ body{
         text-align: right;
         font-size: 14px;
         line-height: 15px;
+    }
+
+    .products-list__items__wrap{
+        width: 320px;
     }
 
     .how-to-work-with-us_instruction{
