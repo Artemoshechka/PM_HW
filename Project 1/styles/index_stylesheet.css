@@ -1265,11 +1265,7 @@ body{
         padding: 18px 2px;
     }
 
-    .buying_items:last-child{
-        display: none;
-    }
-
-    .cloud, .callback{
+    .cloud, .callback, .buying__items div:nth-last-child(-n+1){
         display: none;
     }
 

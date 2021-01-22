@@ -1,7 +1,3 @@
-let device_width = function (){
-    return document.documentElement.clientWidth
-}
-
 const months = {
     '01': 'января',
     '02': 'февраля',
