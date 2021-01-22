@@ -9,7 +9,58 @@
 .news-and-slider__right__slides .slick-track{
     display: flex;
     align-items: flex-start;
-    flex-direction: row;
+}
+
+.news-and-slider__right__slides .slick-arrow{
+    position: absolute;
+    height: 60px;
+    width: 25px;
+    cursor: pointer;
+    border: none;
+    font-size: 0;
+}
+
+.news-and-slider__right__slides .slick-arrow.slick-prev{
+    z-index: 10;
+    background: url("images/previous_button.png") center center no-repeat;
+    top: 40%;
+    left: 0;
+}
+
+.news-and-slider__right__slides .slick-arrow.slick-next{
+    background: url("images/next_button.png") center center no-repeat;
+    top: 40%;
+    right: 0;
+}
+
+.news-and-slider__right__slides .slick-dots{
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.news-and-slider__right__slides .slick-dots li{
+    list-style: none;
+    margin: 0 2px;
+}
+
+.news-and-slider__right__slides .slick-dots li.slick-active button{
+    background-color: #ff5600;
+    border: 1px solid #ff5600 ;
+}
+
+.news-and-slider__right__slides .slick-dots li.slick-active button:focus{
+    outline: none;
+}
+
+.news-and-slider__right__slides .slick-dots button{
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
 }
 
 .products .slick-track{
@@ -86,6 +137,7 @@
     font-size: 0;
     border: 2px solid #dbdee6;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .key-brands__wrapper .slick-arrow.slick-prev{

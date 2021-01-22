@@ -145,22 +145,22 @@ const BANNER = [
     },
     {
         order: 2,
-        img: 'https://same_url2.jpg',
+        img: 'images/slider.jpg',
         url: 'voip_equipment.html',
     },
     {
         order: 4,
-        img: 'https://same_url2.jpg',
+        img: 'images/slider.jpg',
         url: 'voip_equipment.html',
     },
     {
         order: 5,
-        img: 'https://same_url2.jpg',
+        img: 'images/slider.jpg',
         url: 'voip_equipment.html',
     },
     {
         order: 3,
-        img: 'https://same_url2.jpg',
+        img: 'images/slider.jpg',
         url: 'voip_equipment.html',
     }
 ];
@@ -170,7 +170,6 @@ const ITEMS = [
     {
         type: 'new',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        price: '1000',
         oldPrice: '1100',
         currency: 'UAH',
         date: '2021/01/01',
@@ -216,7 +215,6 @@ const ITEMS = [
         type: 'recommended',
         description: 'IP телефон Siemens Gigaset C530A IP',
         img: 'https://same_url.jpg',
-        price: '300',
         oldPrice: '1100',
         currency: 'RUB',
         date: '2020/12/25',
@@ -276,7 +274,6 @@ const ITEMS = [
         type: 'sale',
         description: 'IP телефон Siemens Gigaset C530A IP',
         img: 'https://same_url.jpg',
-        price: '150',
         oldPrice: '200',
         currency: 'USD',
         date: '2021/01/13',
@@ -365,16 +362,16 @@ const BUYING_RIGHT_NOW = [
     },
     {
         title: 'Название товара 2',
+        img: 'images/no_photo.jpg',
+        url: 'https://same_url/item.html',
+    },
+    {
+        title: 'Название товара 3',
         img: 'https://same_url.jpg',
         url: 'https://same_url/item.html',
     },
     {
-        title: 'Название товара 2',
-        img: 'https://same_url.jpg',
-        url: 'https://same_url/item.html',
-    },
-    {
-        title: 'Название товара 2',
+        title: 'Название товара 4',
         img: 'https://same_url.jpg',
         url: 'https://same_url/item.html',
     }

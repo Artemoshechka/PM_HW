@@ -466,6 +466,11 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 880px;
+}
+
+.news-and-slider__right__slides{
+    position: relative;
 }
 
 .slide{
@@ -1199,6 +1204,10 @@ body{
         width: 980px;
     }
 
+    .news-and-slider__right{
+        width: 720px;
+    }
+
     .products-list-new .line-with-text,
     .products-list-recommended .line-with-text,
     .products-list-sale .line-with-text,
@@ -1238,6 +1247,10 @@ body{
         width: 750px;
     }
 
+    .news-and-slider__right{
+        width: 490px;
+    }
+
     .products-list-new .line-with-text,
     .products-list-recommended .line-with-text,
     .products-list-sale .line-with-text,
@@ -1250,6 +1263,10 @@ body{
     .news-and-slider__right__cool-text{
         font-size: 9px;
         padding: 18px 2px;
+    }
+
+    .buying_items:last-child{
+        display: none;
     }
 
     .cloud, .callback{
