@@ -21,7 +21,7 @@
 }
 
 .news-and-slider__right__slides .slick-arrow.slick-prev{
-    z-index: 10;
+    z-index: 1;
     background: url("../images/previous_button.png") center center no-repeat;
     top: 40%;
     left: 0;
