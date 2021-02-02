@@ -1,0 +1,7 @@
+<meta charset="UTF-8">
+<script>
+    let array_1 = prompt('Введите элементы первого массива через проблел:', null).split(" "),
+        array_2 = prompt('Введите элементы второго массива через проблел:', null).split(" ");
+        crossing = '[' + array_1.filter(x => array_2.includes(x)) + ']'
+    alert(crossing);
+</script>

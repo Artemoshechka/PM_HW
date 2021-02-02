@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+    function append(arr_1, arr_2, index){
+        let clone = [];
+        for (char of arr_1){
+            clone.push(char);
+        }
+        for (i = 0; i < arr_2.length; i++){
+            clone.splice(index, 0, arr_2[i]);
+            index++
+        }
+        return alert(clone);
+    }
+    let array_1 = prompt('Введите элементы первого массива через пробел:', null).split(" "),
+        array_2 = prompt('Введите элементы второго массива через пробел:', null).split(" "),
+        index = Number(prompt('Введите индекс вставки:', undefined));
+    if (index === undefined){
+        alert('Некуда вставлять')
+    }
+    else{
+        append(array_1, array_2, index);
+    }
+</script>

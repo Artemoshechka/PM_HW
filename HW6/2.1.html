@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script>
+    function search (array, a){
+        let first_number = 0,
+            last_number = array.length;
+        if(array.includes(a) === false){
+            return alert(`[-1, -1]`)
+        }
+        else{
+            while (true){
+                if (array[first_number] === a){
+                    break
+                }
+                first_number += 1
+            }
+            while (true){
+                if(array[last_number] === a){
+                    break
+                }
+                last_number -= 1
+            }
+        }
+        return alert(`[${first_number}, ${last_number}]`)
+    }
+
+    let array = prompt('Введите элементы массива через проблел:', null).split(" "),
+        element = prompt('Введите искомый элемент', null);
+    if (array === null || element === null){
+        alert('Нет в чем/чего искать');
+    }
+    else{
+        search(array, element);
+    }
+</script>
