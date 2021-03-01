@@ -1,0 +1,6 @@
+.wrapper {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  height: 100vh;
+  background: paleturquoise;
+}
