@@ -1,0 +1,96 @@
+.Todos {
+    display: block;
+    border-radius: 10px;
+    height: 85vh;
+}
+
+.todos_header {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    align-items: center;
+}
+
+select {
+    outline: none;
+    padding: 7px 40px 7px 12px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.AddTodo {
+    position: relative;
+    display: flex;
+    width: 60vw;
+}
+
+input {
+    padding: 7px 100px 7px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    flex-grow: 1;
+    outline: none;
+}
+
+.button_add, .button_search {
+    background: none;
+    border: none;
+    color: #999999;
+    border-left: 1px solid #999999;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.Search {
+    position: relative;
+    display: flex;
+    padding-left: 1rem;
+    margin-right: 10px;
+}
+
+.TodoItems{
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #999999;
+    color: #000000;
+}
+
+.item p {
+    padding-right: 40px;
+}
+
+.item button {
+    outline: none;
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #999999;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.TodoList {
+    height: 100%;
+}

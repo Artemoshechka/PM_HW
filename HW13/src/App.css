@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  font-family: Roboto, sans-serif;
+  background: linear-gradient(to right, #00aaff, #00ff6c);
+}
