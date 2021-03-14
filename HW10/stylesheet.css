@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 40px;
+    font-family: Roboto, sans-serif;
+    background: linear-gradient(to right, #00aaff, #00ff6c);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 800px;
+    height: 900px;
+    border-radius: 10px;
+}
+
+#search_form {
+    margin-bottom: 20px;
+}
+
+#search_form input {
+    outline: none;
+    padding: 2px;
+}
+
+#search_form button {
+    height: 23px;
+}
+
+.error {
+    color: tomato;
+}
+
+.profile {
+    margin: 0 auto;
+    height: auto;
+    width: 50%;
+}
+
+.profile a {
+    color: #000;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+.profile_pic {
+    margin: 0 auto 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.profile_pic img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.repos_and_followers {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: 680px;
+}
+
+.repos_and_followers h3 {
+    margin-bottom: 10px;
+}
+
+.repos_and_followers h3 {
+    position: absolute;
+}
+
+.repos_title {
+    top: 0;
+    left: 150px;
+}
+
+.followers_title {
+    top: 0;
+    right: 150px;
+}
+
+.repos_list, .followers_list {
+    padding: 10px 5px 0;
+    border-radius: 10px;
+    flex-basis: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.repos_list::-webkit-scrollbar-track, .followers_list::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+
+.repos_list::-webkit-scrollbar, .followers_list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.repos_list::-webkit-scrollbar-thumb, .followers_list::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #f5f6f8;
+}
+
+.repos_list:hover::-webkit-scrollbar-thumb, .followers_list:hover::-webkit-scrollbar-thumb{
+    background: #232200;
+}
+
+.repos_list__item,.followers_list__item {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .2);
+}
+
+.followers_list__item img {
+    margin-top: -10px;
+    margin-right: 15px;
+    float: left;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.repos_list__item a, .followers_list__item a{
+    color: black;
+    text-decoration: none;
+}
+
+.repos_list__item a:hover, .followers_list__item a:hover{
+    text-decoration: underline;
+}

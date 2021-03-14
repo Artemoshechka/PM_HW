@@ -2,29 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.css">
     <title>HW10</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-<div class="wrapper">
-    <h1>User search engine</h1>
-    <form id="search_form">
-        <input type="text" id="user" placeholder="Username..." required>
-        <button>Search</button>
-    </form>
-    <div id="userPage">
-        <div id="profile"></div>
-        <div id="repoTitle">
-            <div id="userRepos"></div>
+    <div class="wrapper">
+
+        <h1>User search engine</h1>
+        <form id="search_form">
+            <input type="text" id="user" placeholder="Username..." required>
+            <button>Search</button>
+        </form>
+
+        <div class="profile">
+            <h2>To start, enter username and press 'Search' button</h2>
         </div>
-        <div id="followerTitle">
-            <div id="userFollowers"></div>
+
+        <div class="repos_and_followers">
+
         </div>
     </div>
-</div>
 <script src="script.js"></script>
 </body>
 </html>
