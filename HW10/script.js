@@ -3,19 +3,19 @@ let form = document.querySelector('#search_form'),
     repos_and_followers = document.querySelector('.repos_and_followers');
 
 
-function sendRequestUser(user) {
+async function sendRequestUser(user) {
     return fetch(`https://api.github.com/users/${user}`).then(response => {
         return response.json()
     })
 }
 
-function sendRequestRepos(user){
+async function sendRequestRepos(user){
     return fetch(`https://api.github.com/users/${user}/repos`).then(response => {
         return response.json()
     })
 }
 
-function sendRequestFollowers(user){
+async function sendRequestFollowers(user){
     return fetch(`https://api.github.com/users/${user}/followers`).then(response => {
         return response.json()
     })
@@ -62,27 +62,36 @@ function setError(data){
 function setRepos(user) {
     sendRequestRepos(user)
         .then(data => {
-            repos_list = document.querySelector('.repos_list');
-            data.forEach((repo) => {
-                let repo_container = document.createElement('div')
-                repo_container.className = 'repos_list__item'
-                repo_container.innerHTML = `<p><a href="https://www.github.com/${user}/${repo.name}" target="_blank">${repo.name}</a></p>`
-                repos_list.appendChild(repo_container)
-            })
+            let repos_list = document.querySelector('.repos_list');
+            if (data.length === 0) {
+                repos_list.innerHTML = `<h3 class="empty">This user has no repos</h3>`
+            } else {
+                let repos_list = document.querySelector('.repos_list');
+                data.forEach((repo) => {
+                    let repo_container = document.createElement('div')
+                    repo_container.className = 'repos_list__item'
+                    repo_container.innerHTML = `<p><a href="https://www.github.com/${user}/${repo.name}" target="_blank">${repo.name}</a></p>`
+                    repos_list.appendChild(repo_container)
+                })
+            }
         })
 }
 
 function setFollowers (user) {
     sendRequestFollowers(user)
         .then(data => {
-            followers_list = document.querySelector('.followers_list');
-            data.forEach((follower) => {
-                let follower_container = document.createElement('div');
-                follower_container.className = 'followers_list__item';
-                follower_container.innerHTML = `<a href="${follower.html_url}" target="_blank"><img src="${follower.avatar_url}" alt="avatar"></a>
+            let followers_list = document.querySelector('.followers_list');
+            if (data.length === 0) {
+                followers_list.innerHTML = `<h3 class="empty">This user has no followers</h3>`
+            } else {
+                data.forEach((follower) => {
+                    let follower_container = document.createElement('div');
+                    follower_container.className = 'followers_list__item';
+                    follower_container.innerHTML = `<a href="${follower.html_url}" target="_blank"><img src="${follower.avatar_url}" alt="avatar"></a>
                     <p><a href="${follower.html_url}">${follower.login}</a></p>`
-                followers_list.appendChild(follower_container);
-            })
+                    followers_list.appendChild(follower_container);
+                })
+            }
         })
 }
 

@@ -78,12 +78,16 @@ body {
     height: 680px;
 }
 
-.repos_and_followers h3 {
+.repos_and_followers > h3 {
     margin-bottom: 10px;
 }
 
-.repos_and_followers h3 {
+.repos_and_followers > h3 {
     position: absolute;
+}
+
+.empty {
+    color: tomato;
 }
 
 .repos_title {
